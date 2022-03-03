@@ -31,7 +31,7 @@ package cn.jjx.coding.leetcode.labuladong.dynamic_programming;
  *
  */
 
-public class LC322零钱兑换 {
+public class LC322_零钱兑换 {
 
     public int coinChange(int[] coins, int amount) {
         int[] dp = new int[amount+1];

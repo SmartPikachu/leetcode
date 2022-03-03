@@ -27,7 +27,7 @@ package cn.jjx.coding.leetcode.labuladong.dynamic_programming;
 
  */
 
-public class OF10_1斐波那契数列 {
+public class OF10_1_斐波那契数列 {
 
     public int fib(int n){
         final int Mod = 1000000007;
