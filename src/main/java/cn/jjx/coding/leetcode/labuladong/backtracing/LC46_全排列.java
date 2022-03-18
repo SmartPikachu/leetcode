@@ -1,6 +1,7 @@
 package cn.jjx.coding.leetcode.labuladong.backtracing;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -28,31 +29,33 @@ import java.util.List;
  */
 
 public class LC46_全排列 {
+
+    List<List<Integer>> result = new ArrayList<>();
+    LinkedList<Integer> path = new LinkedList<>();
+    boolean[] used;
+
     public List<List<Integer>> permute(int[] nums) {
-        List<List<Integer>> res = new ArrayList<>();
-        int len = nums.length;
-        if(len==0){
-            return res;
-        }
-        boolean[] used = new boolean[len];
-        List<Integer> path = new ArrayList<>();
-        backtracking(res,used,nums,path,len,0);
-        return res;
+        if(nums.length==0) return result;
+        used=new boolean[nums.length];
+        permuteHelper(nums);
+        return result;
     }
 
-    private void backtracking(List<List<Integer>> res,boolean[] used,int[] nums,List<Integer> path,int len, int depth){
-        if(depth == len){
-            res.add(new ArrayList<>(path));
+    public void permuteHelper(int[] nums){
+        if(path.size()==nums.length){
+            result.add(new ArrayList<>(path));
             return;
         }
-        for(int i=0;i<len;i++){
-            if(!used[i]){
-                path.add(nums[i]);
-                used[i]=true;
-                backtracking(res,used,nums,path,len,depth+1);
-                used[i]=false;
-                path.remove(path.size()-1);
-            }
+        for(int i=0;i<nums.length;i++){
+            if(used[i]){continue;}
+            used[i]=true;
+            //选择当前元素
+            path.add(nums[i]);
+            permuteHelper(nums);
+            //不选当前元素
+            path.removeLast();
+            used[i]=false;
         }
     }
+
 }
