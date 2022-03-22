@@ -3,7 +3,7 @@ package cn.jjx.coding.leetcode.labuladong.design;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LRUCache {
+public class LC146_LRUCache {
 
     class DLinkedNode{
         int key;
@@ -22,7 +22,7 @@ public class LRUCache {
     private int capacity;
     private DLinkedNode head,tail;
 
-    public LRUCache(int capacity){
+    public LC146_LRUCache(int capacity){
         this.size=0;
         this.capacity=capacity;
         //使用伪头部和尾部节点

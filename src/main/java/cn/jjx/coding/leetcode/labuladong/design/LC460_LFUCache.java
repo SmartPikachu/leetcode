@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
-public class LFUCache {
+public class LC460_LFUCache {
 
     class Node{
         int key,val,freq;
@@ -21,7 +21,7 @@ public class LFUCache {
     Map<Integer,Node> keyTable;
     Map<Integer, LinkedList<Node>> freqTable;
 
-    public LFUCache(int capacity){
+    public LC460_LFUCache(int capacity){
         this.minFreq=0;
         this.capacity=capacity;
         keyTable=new HashMap<Integer,Node>();
