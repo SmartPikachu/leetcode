@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.intelligenceProblem;
+package cn.jjx.coding.leetcode.classification.games;
 
 public class LC319_灯泡开关 {
     public int bulbSwitch(int n) {

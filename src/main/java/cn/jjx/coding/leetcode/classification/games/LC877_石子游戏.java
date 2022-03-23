@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.intelligenceProblem;
+package cn.jjx.coding.leetcode.classification.games;
 
 public class LC877_石子游戏 {
     //推理

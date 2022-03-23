@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.intelligenceProblem;
+package cn.jjx.coding.leetcode.classification.games;
 
 public class LC292_Nim游戏 {
     public boolean canWinNim(int n) {
