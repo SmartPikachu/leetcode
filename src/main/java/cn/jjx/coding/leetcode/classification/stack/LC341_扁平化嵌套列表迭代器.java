@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.design;
+package cn.jjx.coding.leetcode.classification.stack;
 
 import cn.jjx.coding.leetcode.data_structure.NestedInteger;
 
