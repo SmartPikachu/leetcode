@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.binary_search;
+package cn.jjx.coding.leetcode.classification.dfs_bfs;
 
 import cn.jjx.coding.leetcode.data_structure.TreeNode;
 
