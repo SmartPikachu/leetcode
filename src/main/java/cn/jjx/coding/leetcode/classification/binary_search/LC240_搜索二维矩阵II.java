@@ -1,6 +1,8 @@
 package cn.jjx.coding.leetcode.classification.binary_search;
 
 public class LC240_搜索二维矩阵II {
+
+    //方法一是通过二分查找
     public boolean searchMatrix(int[][] matrix, int target) {
         for (int[] row : matrix) {
             int index = search(row, target);
@@ -27,7 +29,7 @@ public class LC240_搜索二维矩阵II {
         return -1;
     }
 
-    //Z字型查找
+    //方法二是通过Z字型查找
     public boolean searchMatrix1(int[][] matrix, int target) {
         int m = matrix.length, n = matrix[0].length;
         int x = 0, y = n - 1;
