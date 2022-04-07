@@ -22,6 +22,7 @@ public class LC378_有序矩阵中的第k小的元素 {
         int num = 0;
         while (i >= 0 && j < n) {
             if (matrix[i][j] <= mid) {
+                //注意这块是按照列计算
                 num += i + 1;
                 j++;
             } else {
