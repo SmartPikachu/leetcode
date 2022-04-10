@@ -35,4 +35,13 @@ public class LC112_路径总和 {
         return false;
     }
 
+    //深度优先搜索
+    public boolean hasPathSum1(TreeNode root, int targetSum) {
+        if(root==null) return false;
+        if(root.left==null && root.right==null){
+            return targetSum==root.val;
+        }
+        return hasPathSum1(root.left,targetSum-root.val) || hasPathSum1(root.right,targetSum-root.val);
+    }
+
 }
