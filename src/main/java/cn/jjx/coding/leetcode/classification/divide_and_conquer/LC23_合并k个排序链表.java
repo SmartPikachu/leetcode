@@ -2,6 +2,9 @@ package cn.jjx.coding.leetcode.classification.divide_and_conquer;
 
 import cn.jjx.coding.leetcode.data_structure.ListNode;
 
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
 public class LC23_合并k个排序链表 {
     public ListNode mergeKLists(ListNode[] lists) {
         return merge(lists, 0, lists.length - 1);
@@ -37,4 +40,45 @@ public class LC23_合并k个排序链表 {
         tail.next = (aPtr != null ? aPtr : bPtr);
         return head.next;
     }
+
+    //这块的递归写法
+    public ListNode mergeTwoLists1(ListNode a, ListNode b){
+        if(a==null) return b;
+        if(b==null) return a;
+        if(a.val<b.val){
+            a.next=mergeTwoLists1(a.next,b);
+            return a;
+        }else{
+            b.next=mergeTwoLists1(a,b.next);
+            return b;
+        }
+    }
+
+
+    //采用优先队列的方法
+    public ListNode mergeKLists1(ListNode[] lists){
+        if(lists==null || lists.length==0) return null;
+        PriorityQueue<ListNode> queue = new PriorityQueue<>(lists.length,
+                new Comparator<ListNode>(){
+            @Override
+            public int compare(ListNode o1,ListNode o2){
+                if(o1.val<o2.val) return -1;
+                else if(o1.val==o2.val) return 0;
+                else return 1;
+            }
+                });
+        ListNode dummy = new ListNode(0);
+        ListNode temp = dummy;
+        for(ListNode node:lists){
+            if(node!=null) queue.add(node);
+        }
+        while(!queue.isEmpty()){
+            temp.next=queue.poll();
+            temp=temp.next;
+            if(temp.next!=null) queue.add(temp.next);
+        }
+
+        return dummy.next;
+    }
+
 }

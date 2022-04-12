@@ -1,12 +1,15 @@
 package cn.jjx.coding.leetcode.classification.divide_and_conquer;
 
+import java.util.Comparator;
+import java.util.PriorityQueue;
 import java.util.Random;
 
 public class LC215_数组中的第K个最大元素 {
     Random random = new Random();
 
     public int findKthLargest(int[] nums, int k) {
-        return quickSelect(nums, 0, nums.length - 1, nums.length - k);
+        return quickSelect(nums, 0, nums.length - 1,
+                nums.length - k);
     }
 
     public int quickSelect(int[] a, int l, int r, int index) {
@@ -74,5 +77,22 @@ public class LC215_数组中的第K个最大元素 {
         }
     }
 
+    //基于优先队列
+    public int findKthLargest2(int[] nums,int k){
+        int len = nums.length;
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>(k,
+                Comparator.comparing(a->a));
+        for(int i=0;i<k;i++){
+            minHeap.offer(nums[i]);
+        }
+        for(int i=k;i<len;i++){
+            Integer element = minHeap.peek();
+            if(nums[i]>element){
+                minHeap.poll();
+                minHeap.offer(nums[i]);
+            }
+        }
+        return minHeap.peek();
+    }
 
 }
