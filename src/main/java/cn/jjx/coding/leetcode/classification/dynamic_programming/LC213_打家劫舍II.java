@@ -21,4 +21,20 @@ public class LC213_打家劫舍II {
         return second;
     }
 
+
+    public int robRange1(int[] nums,int start, int end){
+        int len = end-start+1;
+        if(len==1){
+            return nums[start];
+        }
+        int[] dp = new int[nums.length];
+        dp[start]=nums[start];
+        dp[start+1]=Math.max(nums[start],nums[start+1]);
+
+        for(int i=start+2;i<=end;i++){
+            dp[i]=Math.max(dp[i-1],dp[i-2]+nums[i]);
+        }
+        return dp[end];
+    }
+
 }
