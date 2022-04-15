@@ -14,6 +14,7 @@ public class LC337_打家劫舍III {
         return Math.max(f.getOrDefault(root, 0), g.getOrDefault(root, 0));
     }
 
+    //深度优先搜索后序遍历二叉树
     public void dfs(TreeNode node) {
         if (node == null) {
             return;
@@ -21,7 +22,9 @@ public class LC337_打家劫舍III {
         dfs(node.left);
         dfs(node.right);
         f.put(node, node.val + g.getOrDefault(node.left, 0) + g.getOrDefault(node.right, 0));
-        g.put(node, Math.max(f.getOrDefault(node.left, 0), g.getOrDefault(node.left, 0)) + Math.max(f.getOrDefault(node.right, 0), g.getOrDefault(node.right, 0)));
+        g.put(node, Math.max(f.getOrDefault(node.left, 0),
+                g.getOrDefault(node.left, 0)) + Math.max(f.getOrDefault(node.right, 0),
+                g.getOrDefault(node.right, 0)));
     }
 
 
