@@ -15,6 +15,8 @@ public class LC392_判断子序列 {
     }
 
 
+
+    //f[i][j] 表示字符串 tt 中从位置 ii 开始往后字符 jj 第一次出现的位置
     public boolean isSubsequence1(String s, String t) {
         int n = s.length(), m = t.length();
 

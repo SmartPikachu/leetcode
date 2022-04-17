@@ -11,7 +11,8 @@ public class LC474_一和零 {
                 for (int k = 0; k <= n; k++) {
                     dp[i][j][k] = dp[i - 1][j][k];
                     if (j >= zeros && k >= ones) {
-                        dp[i][j][k] = Math.max(dp[i][j][k], dp[i - 1][j - zeros][k - ones] + 1);
+                        dp[i][j][k] = Math.max(dp[i][j][k], 
+                                dp[i - 1][j - zeros][k - ones] + 1);
                     }
                 }
             }
@@ -37,7 +38,8 @@ public class LC474_一和零 {
             int zeros = zerosOnes[0], ones = zerosOnes[1];
             for (int j = m; j >= zeros; j--) {
                 for (int k = n; k >= ones; k--) {
-                    dp[j][k] = Math.max(dp[j][k], dp[j - zeros][k - ones] + 1);
+                    dp[j][k] = Math.max(dp[j][k],
+                            dp[j - zeros][k - ones] + 1);
                 }
             }
         }

@@ -19,7 +19,7 @@ public class LC416_分割等和子集 {
             int num = nums[i];
             for(int j=1;j<=target;j++){
                 if(j>=num){
-                    dp[i][j]=dp[i-1][j]|dp[i-1][j-num];
+                    dp[i][j]=dp[i-1][j]|| dp[i-1][j-num];
                 }else{
                     dp[i][j]=dp[i-1][j];
                 }
