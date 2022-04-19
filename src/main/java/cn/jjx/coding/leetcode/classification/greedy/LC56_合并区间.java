@@ -6,6 +6,8 @@ import java.util.Comparator;
 import java.util.List;
 
 public class LC56_合并区间 {
+
+    //排序+贪心算法，感觉不出来是贪心算法，感觉和下面的题解几乎一致
     public int[][] merge(int[][] intervals) {
         int len = intervals.length;
         if (len < 2) {
@@ -37,7 +39,7 @@ public class LC56_合并区间 {
 
 
 
-
+    //排序+双指针的方法
     public int[][] merge1(int[][] intervals) {
         if (intervals.length == 0) {
             return new int[0][2];
