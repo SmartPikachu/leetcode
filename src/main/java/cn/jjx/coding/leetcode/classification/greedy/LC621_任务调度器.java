@@ -5,45 +5,25 @@ import java.util.*;
 public class LC621_任务调度器 {
 
     public int leastInterval(char[] tasks, int n) {
-        Map<Character, Integer> freq = new HashMap<Character, Integer>();
-        for (char ch : tasks) {
-            freq.put(ch, freq.getOrDefault(ch, 0) + 1);
+        //利用桶思想，如果间隔时间足够长的情况是下面这样，
+        // 总排队时间 = (桶个数 - 1) * (n + 1) + 最后一桶的任务数，
+        //如果间隔时间比较短
+        int[] bukets = new int[26];
+        for(int i=0;i<tasks.length;i++){
+            bukets[tasks[i]-'A']++;
         }
-
-        // 任务总数
-        int m = freq.size();
-        List<Integer> nextValid = new ArrayList<Integer>();
-        List<Integer> rest = new ArrayList<Integer>();
-        Set<Map.Entry<Character, Integer>> entrySet = freq.entrySet();
-        for (Map.Entry<Character, Integer> entry : entrySet) {
-            int value = entry.getValue();
-            nextValid.add(1);
-            rest.add(value);
-        }
-
-        int time = 0;
-        for (int i = 0; i < tasks.length; ++i) {
-            ++time;
-            int minNextValid = Integer.MAX_VALUE;
-            for (int j = 0; j < m; ++j) {
-                if (rest.get(j) != 0) {
-                    minNextValid = Math.min(minNextValid, nextValid.get(j));
-                }
+        Arrays.sort(bukets);
+        int maxTimes = bukets[25];
+        int maxCount=1;
+        for(int i=25;i>=1;i--){
+            if(bukets[i]==bukets[i-1]){
+                maxCount++;
+            }else{
+                break;
             }
-            time = Math.max(time, minNextValid);
-            int best = -1;
-            for (int j = 0; j < m; ++j) {
-                if (rest.get(j) != 0 && nextValid.get(j) <= time) {
-                    if (best == -1 || rest.get(j) > rest.get(best)) {
-                        best = j;
-                    }
-                }
-            }
-            nextValid.set(best, time + n + 1);
-            rest.set(best, rest.get(best) - 1);
         }
-
-        return time;
+        int res = (maxTimes-1)*(n+1)+maxCount;
+        return Math.max(res,tasks.length);
     }
 
 }

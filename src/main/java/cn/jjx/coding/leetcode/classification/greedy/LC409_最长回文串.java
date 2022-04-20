@@ -1,6 +1,7 @@
 package cn.jjx.coding.leetcode.classification.greedy;
 
 public class LC409_最长回文串 {
+
     public int longestPalindrome(String s) {
         int[] count = new int[128];
         int length = s.length();

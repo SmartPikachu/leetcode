@@ -1,6 +1,7 @@
 package cn.jjx.coding.leetcode.classification.greedy;
 
 public class LC860_柠檬水找零 {
+
     public boolean lemonadeChange(int[] bills) {
         int five = 0, ten = 0;
         for (int bill : bills) {

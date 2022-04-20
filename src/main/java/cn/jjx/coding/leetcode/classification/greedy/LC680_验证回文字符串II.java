@@ -1,6 +1,7 @@
 package cn.jjx.coding.leetcode.classification.greedy;
 
 public class LC680_验证回文字符串II {
+
     public boolean validPalindrome(String s) {
         int low = 0, high = s.length() - 1;
         while (low < high) {

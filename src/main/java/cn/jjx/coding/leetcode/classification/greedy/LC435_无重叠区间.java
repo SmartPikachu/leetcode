@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public class LC435_无重叠区间 {
+
     public int eraseOverlapIntervals(int[][] intervals) {
         if (intervals.length == 0) {
             return 0;
