@@ -38,11 +38,12 @@ public class LC25_K个一组翻转链表 {
         return pre;
     }
 
+
     //递归的方法，当然方法很多，这里只介绍一种
     //区间是[a,b)
     private ListNode reverse(ListNode a,ListNode b){
         ListNode pre,cur,next;
-        pre=null;cur=a;next=b;
+        pre=null;cur=a;
         while(cur!=b){
             next=cur.next;
             cur.next=pre;
