@@ -1,10 +1,11 @@
-package cn.jjx.coding.leetcode.classification.math_bit;
+package cn.jjx.coding.leetcode.classification.hashtable;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class LC229_求众数II {
+
     public List<Integer> majorityElement(int[] nums) {
         HashMap<Integer, Integer> cnt = new HashMap<Integer, Integer>();
 

@@ -1,10 +1,11 @@
-package cn.jjx.coding.leetcode.classification.math_bit;
+package cn.jjx.coding.leetcode.classification.queue;
 
 import java.util.HashSet;
 import java.util.PriorityQueue;
 import java.util.Set;
 
 public class LC264_丑数II {
+
     public int nthUglyNumber(int n) {
         int[] factors = {2, 3, 5};
         Set<Long> seen = new HashSet<Long>();
@@ -24,4 +25,5 @@ public class LC264_丑数II {
         }
         return ugly;
     }
+
 }

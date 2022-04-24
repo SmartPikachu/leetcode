@@ -1,6 +1,8 @@
 package cn.jjx.coding.leetcode.classification.math_bit;
 
 public class LC372_超级次方 {
+
+    //把LC50看明白了，这道题就很清晰，不过偏数学。
     static final int MOD = 1337;
     public int superPow(int a, int[] b) {
         int ans=1;
