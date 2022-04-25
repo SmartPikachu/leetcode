@@ -2,7 +2,11 @@ package cn.jjx.coding.leetcode.classification.math_bit;
 
 public class LC458_可怜的小猪 {
 
-    //动态规划的方法
+    //动态规划的方法，用 f(i,j)表示i只小猪测试j轮
+    //最多可以在多少桶液体中确定有毒的是哪一桶
+    //在确定最大测试轮数为iterations的情况下，
+    //需要计算使得f(i,iterations)≥buckets 成立的最小的i。
+    //下面的算法更像用编程去实现一系列的计算公式，本质不难。
     public int poorPigs(int buckets, int minutesToDie, int minutesToTest) {
         if (buckets == 1) {
             return 0;
