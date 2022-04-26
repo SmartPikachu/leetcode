@@ -5,6 +5,7 @@ import java.util.Queue;
 
 public class LC225_用队列组成栈 {
 
+    //方法一是通过两个队列实现栈
     class MyStack {
         Queue<Integer> queue1;
         Queue<Integer> queue2;
@@ -42,6 +43,7 @@ public class LC225_用队列组成栈 {
         }
     }
 
+    //方法二通过一个队列实现栈
     class MyStack1 {
         Queue<Integer> queue;
 

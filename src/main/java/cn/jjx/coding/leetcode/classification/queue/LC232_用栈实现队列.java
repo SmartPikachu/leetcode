@@ -4,6 +4,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 public class LC232_用栈实现队列 {
+
     class MyQueue {
         Deque<Integer> inStack;
         Deque<Integer> outStack;

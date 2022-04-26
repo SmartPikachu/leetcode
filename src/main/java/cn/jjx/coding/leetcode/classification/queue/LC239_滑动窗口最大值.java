@@ -4,6 +4,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 public class LC239_滑动窗口最大值 {
+
     public int[] maxSlidingWindow(int[] nums, int k) {
         int n = nums.length;
         //单调队列存的是下标
