@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.sliding_window;
+package cn.jjx.coding.leetcode.classification.dynamic_programming;
 
 public class LC72_编辑距离 {
     public int minDistance(String word1, String word2) {
