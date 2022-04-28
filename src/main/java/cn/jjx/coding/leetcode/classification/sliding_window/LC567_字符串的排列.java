@@ -3,6 +3,7 @@ package cn.jjx.coding.leetcode.classification.sliding_window;
 import java.util.Arrays;
 
 public class LC567_字符串的排列 {
+
     public boolean checkInclusion(String s1, String s2) {
         int n=s1.length(),m=s2.length();
         if(n>m){
@@ -26,4 +27,5 @@ public class LC567_字符串的排列 {
         }
         return false;
     }
+
 }
