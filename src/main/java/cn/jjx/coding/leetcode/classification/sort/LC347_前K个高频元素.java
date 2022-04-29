@@ -3,6 +3,7 @@ package cn.jjx.coding.leetcode.classification.sort;
 import java.util.*;
 
 public class LC347_前K个高频元素 {
+
     //使用堆排的方法
     public int[] topKFrequent(int[] nums, int k) {
         Map<Integer, Integer> occurrences = new HashMap<Integer, Integer>();
@@ -33,6 +34,7 @@ public class LC347_前K个高频元素 {
         }
         return ret;
     }
+
 
     //使用快速排序的方法
     public int[] topKFrequent1(int[] nums, int k) {
