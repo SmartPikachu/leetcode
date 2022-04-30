@@ -3,6 +3,7 @@ package cn.jjx.coding.leetcode.classification.two_pointers;
 import cn.jjx.coding.leetcode.data_structure.ListNode;
 
 public class OFII_22链表中环的入口节点 {
+
     public ListNode detectCycle(ListNode head) {
         if(head == null) return null;
         ListNode fast,slow;
@@ -20,4 +21,5 @@ public class OFII_22链表中环的入口节点 {
         }
         return slow;
     }
+
 }

@@ -3,6 +3,7 @@ package cn.jjx.coding.leetcode.classification.two_pointers;
 import cn.jjx.coding.leetcode.data_structure.ListNode;
 
 public class OF_22链表中倒数第k个节点 {
+
     public ListNode getKthFromEnd(ListNode head, int k) {
         ListNode fast = head,slow=head;
         fast=slow=head;
@@ -17,4 +18,5 @@ public class OF_22链表中倒数第k个节点 {
         return slow;
 
     }
+
 }
