@@ -4,7 +4,9 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 public class LC224_基本计算器 {
+
     public int calculate(String s) {
+        //这里注意LinkedList和ArrayDeque都分别实现了Deque接口
         Deque<Integer> ops = new LinkedList<>();
         ops.push(1);
         int sign=1;

@@ -4,6 +4,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 public class L150_逆波兰表达式求值 {
+
     public int evalRPN(String[] tokens) {
         Deque<Integer> stack = new LinkedList<Integer>();
         int n = tokens.length;
@@ -35,7 +36,8 @@ public class L150_逆波兰表达式求值 {
     }
 
     public boolean isNumber(String token) {
-        return !("+".equals(token) || "-".equals(token) || "*".equals(token) || "/".equals(token));
+        return !("+".equals(token) || "-".equals(token)
+                || "*".equals(token) || "/".equals(token));
     }
 
 }

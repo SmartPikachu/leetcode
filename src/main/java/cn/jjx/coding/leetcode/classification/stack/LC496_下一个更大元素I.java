@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LC496_下一个更大元素I {
+
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
         Deque<Integer> stack = new ArrayDeque<Integer>();

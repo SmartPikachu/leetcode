@@ -4,6 +4,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 public class LC227_基本计算器II {
+
     public int calculate(String s) {
         Deque<Integer> stack = new LinkedList<>();
         char preSign = '+';
@@ -37,4 +38,5 @@ public class LC227_基本计算器II {
         }
         return ans;
     }
+
 }

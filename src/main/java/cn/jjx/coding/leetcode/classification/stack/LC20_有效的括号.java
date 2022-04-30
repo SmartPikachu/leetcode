@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.Map;
 
 public class LC20_有效的括号 {
+
     public boolean isValid(String s) {
         int n = s.length();
         if (n % 2 == 1) {

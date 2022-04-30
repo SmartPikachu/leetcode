@@ -4,6 +4,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 public class LC772_基本计算器III {
+
     private int index = 0;
     public int calculate(String s) {
         char[] ch = s.toCharArray();
