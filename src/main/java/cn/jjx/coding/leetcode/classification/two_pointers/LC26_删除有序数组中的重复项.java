@@ -1,6 +1,7 @@
 package cn.jjx.coding.leetcode.classification.two_pointers;
 
 public class LC26_删除有序数组中的重复项 {
+
     public int removeDuplicates(int[] nums) {
         int n = nums.length;
         if (n == 0) {
@@ -16,4 +17,5 @@ public class LC26_删除有序数组中的重复项 {
         }
         return slow;
     }
+
 }

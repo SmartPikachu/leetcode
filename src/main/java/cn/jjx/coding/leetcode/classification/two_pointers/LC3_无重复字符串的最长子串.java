@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class LC3_无重复字符串的最长子串 {
+
     public int lengthOfLongestSubstring(String s) {
         // 哈希集合，记录每个字符是否出现过
         Set<Character> occ = new HashSet<Character>();
