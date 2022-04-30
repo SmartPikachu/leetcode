@@ -2,6 +2,7 @@ package cn.jjx.coding.leetcode.classification.two_pointers;
 
 public class LC75_颜色分类 {
 
+    //双指针方法一
     public void sortColors(int[] nums) {
         int n = nums.length;
         int p0 = 0, p1 = 0;
@@ -26,6 +27,7 @@ public class LC75_颜色分类 {
         }
     }
 
+    //双指针方法二
     public void sortColors1(int[] nums) {
         int n = nums.length;
         int p0 = 0, p2 = n - 1;
