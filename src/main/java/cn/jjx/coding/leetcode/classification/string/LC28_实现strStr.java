@@ -1,6 +1,7 @@
 package cn.jjx.coding.leetcode.classification.string;
 
 public class LC28_实现strStr {
+
     public void getNext(int[] next, String s){
         int j = -1;
         next[0] = j;

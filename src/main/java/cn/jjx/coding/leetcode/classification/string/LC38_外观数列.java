@@ -1,6 +1,7 @@
 package cn.jjx.coding.leetcode.classification.string;
 
 public class LC38_外观数列 {
+
     public String countAndSay(int n) {
         String str = "1";
         for (int i = 2; i <= n; ++i) {
