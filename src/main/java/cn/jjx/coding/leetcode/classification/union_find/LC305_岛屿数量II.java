@@ -5,7 +5,8 @@ import java.util.List;
 
 public class LC305_岛屿数量II {
 
-    private final static int[][] DIRECTIONS = {{-1, 0}, {0, -1}, {1, 0}, {0, 1}};
+    private final static int[][] DIRECTIONS =
+            {{-1, 0}, {0, -1}, {1, 0}, {0, 1}};
 
     public List<Integer> numIslands2(int m, int n, int[][] positions) {
         UnionFind unionFind = new UnionFind(m * n);

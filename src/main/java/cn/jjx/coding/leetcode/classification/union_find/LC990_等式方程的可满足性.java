@@ -1,6 +1,7 @@
 package cn.jjx.coding.leetcode.classification.union_find;
 
 public class LC990_等式方程的可满足性 {
+
     public boolean equationsPossible(String[] equations) {
         int[] parent = new int[26];
         for (int i = 0; i < 26; i++) {

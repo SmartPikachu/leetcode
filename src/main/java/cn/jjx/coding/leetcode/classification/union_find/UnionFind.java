@@ -1,8 +1,10 @@
 package cn.jjx.coding.leetcode.classification.union_find;
 
 public class UnionFind {
+
     /**
-     * 关于并查集的详细介绍可以看 https://labuladong.gitee.io/algo/2/20/41/
+     * 关于并查集的详细介绍可以看
+     * https://labuladong.gitee.io/algo/
      * 里面有譬如路径压缩的解释
      */
 
