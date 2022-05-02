@@ -18,9 +18,12 @@ public class KMP {
         int[] next = new int[n];
         int j=-1;
         next[0]=j;
-        for(int i=1;i<n;i++){//注意i要从1开始
-            while(j>=0 && s.charAt(i)!=s.charAt(j+1)){//前后缀不相同
-                j=next[j];//向前回退，这块只用用纸模拟一下就清晰，本质j就是从右到左，i也是从右到左
+        //注意i要从1开始
+        for(int i=1;i<n;i++){
+            //前后缀不相同
+            while(j>=0 && s.charAt(i)!=s.charAt(j+1)){
+    //向前回退，这块只用用纸模拟一下就清晰，本质j就是从右到左，i也是从右到左
+                j=next[j];
             }
             if(s.charAt(i)==s.charAt(j+1)){
                 j++;
@@ -42,8 +45,8 @@ public class KMP {
         int j=0;
         next[0]=j;
         for(int i=1;i<n;i++){
-            while(j>=0 && s.charAt(i)!=s.charAt(j)){//前后缀不相同
-                j=next[j-1];//向前回退，这块只用用纸模拟一下就清晰，本质j就是从右到左，i也是从右到左
+            while(j>=0 && s.charAt(i)!=s.charAt(j)){
+                j=next[j-1];
             }
             if(s.charAt(i)==s.charAt(j)){
                 j++;

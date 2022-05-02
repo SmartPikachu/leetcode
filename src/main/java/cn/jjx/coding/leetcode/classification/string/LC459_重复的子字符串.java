@@ -21,15 +21,16 @@ public class LC459_重复的子字符串 {
         int m = pattern.length();
         int[] fail = new int[m];
         Arrays.fill(fail, -1);
+        int j=fail[0];
         for (int i = 1; i < m; ++i) {
-            int j = fail[i - 1];
             while (j != -1 &&
             pattern.charAt(j + 1) != pattern.charAt(i)) {
                 j = fail[j];
             }
             if (pattern.charAt(j + 1) == pattern.charAt(i)) {
-                fail[i] = j + 1;
+                j++;
             }
+            fail[i]=j;
         }
         int match = -1;
         for (int i = 1; i < n - 1; ++i) {
