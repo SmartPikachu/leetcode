@@ -36,7 +36,8 @@ public class LC449_序列化和反序列化二叉搜索树 {
         return sb;
     }
 
-    public TreeNode helper(Integer lower, Integer upper, ArrayDeque<Integer> nums){
+    public TreeNode helper(Integer lower, Integer upper,
+                           ArrayDeque<Integer> nums){
         if(nums.isEmpty()){
             return null;
         }
@@ -46,6 +47,7 @@ public class LC449_序列化和反序列化二叉搜索树 {
         }
         nums.removeLast();
         TreeNode root = new TreeNode(val);
+        //这块一定要注意下，先右孩子，然后左孩子
         root.right=helper(val,upper,nums);
         root.left=helper(lower,val,nums);
         return root;

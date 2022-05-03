@@ -2,12 +2,35 @@ package cn.jjx.coding.leetcode.classification.tree;
 
 import cn.jjx.coding.leetcode.data_structure.TreeNode;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.HashMap;
 import java.util.Map;
 
 public class LC230_二叉搜索树中第k小的元素 {
 
+
+    //中序遍历
     public int kthSmallest(TreeNode root, int k) {
+        Deque<TreeNode> stack = new ArrayDeque<TreeNode>();
+        while (root != null || !stack.isEmpty()) {
+            while (root != null) {
+                stack.push(root);
+                root = root.left;
+            }
+            root = stack.pop();
+            --k;
+            if (k == 0) {
+                break;
+            }
+            root = root.right;
+        }
+        return root.val;
+    }
+
+
+
+    public int kthSmallest1(TreeNode root, int k) {
         MyBst bst = new MyBst(root);
         return bst.kthSmallest(k);
     }
@@ -44,7 +67,8 @@ public class LC230_二叉搜索树中第k小的元素 {
             if (node == null) {
                 return 0;
             }
-            nodeNum.put(node, 1 + countNodeNum(node.left) + countNodeNum(node.right));
+            nodeNum.put(node, 1 + countNodeNum(node.left)
+                    + countNodeNum(node.right));
             return nodeNum.get(node);
         }
 

@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class LC111_二叉树的最小深度 {
+
     public int minDepth(TreeNode root) {
         if (root == null) {
             return 0;
@@ -30,7 +31,6 @@ public class LC111_二叉树的最小深度 {
     class QueueNode {
         TreeNode node;
         int depth;
-
         public QueueNode(TreeNode node, int depth) {
             this.node = node;
             this.depth = depth;
@@ -58,7 +58,6 @@ public class LC111_二叉树的最小深度 {
                 queue.offer(new QueueNode(node.right, depth + 1));
             }
         }
-
         return 0;
     }
 

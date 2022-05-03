@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LC501_二叉搜索树中的众数 {
+
     List<Integer> answer = new ArrayList<Integer>();
     int base, count, maxCount;
 

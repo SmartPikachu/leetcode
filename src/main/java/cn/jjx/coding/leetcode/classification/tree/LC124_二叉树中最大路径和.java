@@ -3,6 +3,7 @@ package cn.jjx.coding.leetcode.classification.tree;
 import cn.jjx.coding.leetcode.data_structure.TreeNode;
 
 public class LC124_二叉树中最大路径和 {
+
     int maxSum = Integer.MIN_VALUE;
 
     public int maxPathSum(TreeNode root) {

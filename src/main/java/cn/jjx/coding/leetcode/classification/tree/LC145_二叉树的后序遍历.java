@@ -29,7 +29,6 @@ public class LC145_二叉树的后序遍历 {
         if (root == null) {
             return res;
         }
-
         Deque<TreeNode> stack = new LinkedList<TreeNode>();
         TreeNode prev = null;
         while (root != null || !stack.isEmpty()) {

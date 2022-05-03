@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Queue;
 
 public class LC102_二叉树的层序遍历 {
+
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> ret = new ArrayList<List<Integer>>();
         if (root == null) {
@@ -19,7 +20,7 @@ public class LC102_二叉树的层序遍历 {
         while (!queue.isEmpty()) {
             List<Integer> level = new ArrayList<Integer>();
             int currentLevelSize = queue.size();
-            for (int i = 1; i <= currentLevelSize; ++i) {
+            for (int i = 0; i < currentLevelSize; ++i) {
                 TreeNode node = queue.poll();
                 level.add(node.val);
                 if (node.left != null) {

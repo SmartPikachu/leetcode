@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class LC101_对称二叉树 {
+
     public boolean isSymmetric(TreeNode root) {
         return check(root, root);
     }

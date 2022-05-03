@@ -3,6 +3,7 @@ package cn.jjx.coding.leetcode.classification.tree;
 import cn.jjx.coding.leetcode.data_structure.TreeNode;
 
 public class LC700_二叉搜索树中的搜索 {
+
     public TreeNode searchBST(TreeNode root, int val) {
         if (root == null) {
             return null;

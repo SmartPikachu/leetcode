@@ -6,6 +6,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class LC617_合并二叉树 {
+
+    //深度优先搜索
     public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
         if (t1 == null) {
             return t2;
@@ -20,6 +22,7 @@ public class LC617_合并二叉树 {
     }
 
 
+    //广度优先搜索
     public TreeNode mergeTrees1(TreeNode t1, TreeNode t2) {
         if (t1 == null) {
             return t2;
@@ -35,8 +38,10 @@ public class LC617_合并二叉树 {
         queue1.offer(t1);
         queue2.offer(t2);
         while (!queue1.isEmpty() && !queue2.isEmpty()) {
-            TreeNode node = queue.poll(), node1 = queue1.poll(), node2 = queue2.poll();
-            TreeNode left1 = node1.left, left2 = node2.left, right1 = node1.right, right2 = node2.right;
+            TreeNode node = queue.poll(),
+                    node1 = queue1.poll(), node2 = queue2.poll();
+            TreeNode left1 = node1.left, left2 = node2.left,
+                    right1 = node1.right, right2 = node2.right;
             if (left1 != null || left2 != null) {
                 if (left1 != null && left2 != null) {
                     TreeNode left = new TreeNode(left1.val + left2.val);

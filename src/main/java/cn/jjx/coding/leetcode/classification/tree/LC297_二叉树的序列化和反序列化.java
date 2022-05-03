@@ -7,6 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class LC297_二叉树的序列化和反序列化 {
+
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
         return rserialize(root,"");
@@ -41,6 +42,7 @@ public class LC297_二叉树的序列化和反序列化 {
         root.right=rdeserialize(dataList);
         return root;
     }
+
 }
 
 

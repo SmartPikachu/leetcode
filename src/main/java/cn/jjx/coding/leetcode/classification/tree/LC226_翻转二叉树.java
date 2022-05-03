@@ -5,6 +5,7 @@ import cn.jjx.coding.leetcode.data_structure.TreeNode;
 import java.util.LinkedList;
 
 public class LC226_翻转二叉树 {
+
     public TreeNode invertTree(TreeNode root) {
         if (root == null) {
             return null;

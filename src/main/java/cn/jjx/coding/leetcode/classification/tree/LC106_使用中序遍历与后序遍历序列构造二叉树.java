@@ -8,7 +8,9 @@ import java.util.LinkedList;
 import java.util.Map;
 
 public class LC106_使用中序遍历与后序遍历序列构造二叉树 {
+
     class Solution {
+
         int post_idx;
         int[] postorder;
         int[] inorder;

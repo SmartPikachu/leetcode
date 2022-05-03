@@ -8,7 +8,7 @@ import java.util.LinkedList;
 public class LC98_验证二叉搜索树 {
     //递归
     public boolean isValidBST(TreeNode root) {
-        return isVaildBST(root,Long.MIN_VALUE,Long.MAX_VALUE);
+        return isVaildBST(root,Integer.MIN_VALUE-1L,Integer.MAX_VALUE+1L);
     }
 
     public boolean isVaildBST(TreeNode node,long lower,long upper){
@@ -18,13 +18,14 @@ public class LC98_验证二叉搜索树 {
         if(node.val<=lower || node.val>=upper){
             return false;
         }
-        return isVaildBST(node.left,lower,node.val) && isVaildBST(node.right,node.val,upper);
+        return isVaildBST(node.left,lower,node.val) &&
+                isVaildBST(node.right,node.val,upper);
     }
 
     //非递归中序遍历
     public boolean isValidBST1(TreeNode root){
         Deque<TreeNode> stack = new LinkedList<TreeNode>();
-        double inOrder = -Double.MAX_VALUE;
+        long inOrder = Integer.MIN_VALUE-1L;
         while(!stack.isEmpty() || root!=null){
             while(root!=null){
                 stack.push(root);

@@ -3,6 +3,7 @@ package cn.jjx.coding.leetcode.classification.tree;
 import cn.jjx.coding.leetcode.data_structure.TreeNode;
 
 public class LC701_二叉搜索树中的插入操作 {
+
     //非递归的方法
     public TreeNode insertIntoBST(TreeNode root, int val) {
         if(root==null){
@@ -43,4 +44,5 @@ public class LC701_二叉搜索树中的插入操作 {
         }
         return root;
     }
+
 }

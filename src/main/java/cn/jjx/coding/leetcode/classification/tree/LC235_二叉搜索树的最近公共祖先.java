@@ -6,6 +6,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LC235_二叉搜索树的最近公共祖先 {
+
+
+    //一次遍历的方法
+    public TreeNode lowestCommonAncestor1(TreeNode root, TreeNode p, TreeNode q) {
+        TreeNode ancestor = root;
+        while (true) {
+            if (p.val < ancestor.val && q.val < ancestor.val) {
+                ancestor = ancestor.left;
+            } else if (p.val > ancestor.val && q.val > ancestor.val) {
+                ancestor = ancestor.right;
+            } else {
+                break;
+            }
+        }
+        return ancestor;
+    }
+
+
+    //两次遍历的方法
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         List<TreeNode> path_p = getPath(root, p);
         List<TreeNode> path_q = getPath(root, q);
@@ -34,21 +53,5 @@ public class LC235_二叉搜索树的最近公共祖先 {
         path.add(node);
         return path;
     }
-
-
-    public TreeNode lowestCommonAncestor1(TreeNode root, TreeNode p, TreeNode q) {
-        TreeNode ancestor = root;
-        while (true) {
-            if (p.val < ancestor.val && q.val < ancestor.val) {
-                ancestor = ancestor.left;
-            } else if (p.val > ancestor.val && q.val > ancestor.val) {
-                ancestor = ancestor.right;
-            } else {
-                break;
-            }
-        }
-        return ancestor;
-    }
-
 
 }

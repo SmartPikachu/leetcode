@@ -3,6 +3,7 @@ package cn.jjx.coding.leetcode.classification.tree;
 import cn.jjx.coding.leetcode.data_structure.TreeNode;
 
 public class LC222_完全二叉树的节点个数 {
+
     /**
      * 再来回顾一下满二叉的节点个数怎么计算，如果满二叉树的层数为h，则总节点数为：2^h - 1.
      *left == right。这说明，左子树一定是满二叉树，因为节点已经填充到右子树了，左子树必定已经填满了。

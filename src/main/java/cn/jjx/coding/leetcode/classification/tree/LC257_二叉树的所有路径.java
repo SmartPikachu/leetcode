@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LC257_二叉树的所有路径 {
+
     public List<String> binaryTreePaths(TreeNode root) {
         List<String> paths = new ArrayList<String>();
         constructPaths(root, "", paths);
