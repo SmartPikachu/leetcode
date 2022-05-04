@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.union_find;
+package cn.jjx.coding.leetcode.classification.graph.unionfind;
 
 public class UnionFind {
 
