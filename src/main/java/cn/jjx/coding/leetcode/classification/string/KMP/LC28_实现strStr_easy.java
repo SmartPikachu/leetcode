@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.string;
+package cn.jjx.coding.leetcode.classification.string.KMP;
 
 public class LC28_实现strStr_easy {
 
