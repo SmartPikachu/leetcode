@@ -1,4 +1,4 @@
 package cn.jjx.coding.leetcode.classification.string.前缀树;
 
-public class OFII_63_替换单词_mid {
+public class LC677_键值映射_mid {
 }

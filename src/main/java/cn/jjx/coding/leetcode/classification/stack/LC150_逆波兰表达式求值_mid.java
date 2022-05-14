@@ -3,7 +3,7 @@ package cn.jjx.coding.leetcode.classification.stack;
 import java.util.Deque;
 import java.util.LinkedList;
 
-public class L150_逆波兰表达式求值_mid {
+public class LC150_逆波兰表达式求值_mid {
 
     public int evalRPN(String[] tokens) {
         Deque<Integer> stack = new LinkedList<Integer>();
