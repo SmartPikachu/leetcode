@@ -1,4 +1,4 @@
 package cn.jjx.coding.leetcode.classification.graph;
 
-public class OFII_111_计算除法_mid {
+public class LC797_所有可能的路径_mid {
 }
