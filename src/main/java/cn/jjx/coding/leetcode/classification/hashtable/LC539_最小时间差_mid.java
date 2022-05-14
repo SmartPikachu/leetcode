@@ -1,4 +1,4 @@
 package cn.jjx.coding.leetcode.classification.hashtable;
 
-public class OFII_34_外星人语言是否排序_easy {
+public class LC539_最小时间差_mid {
 }
