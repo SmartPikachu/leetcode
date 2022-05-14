@@ -1,4 +1,4 @@
 package cn.jjx.coding.leetcode.classification.linked_list;
 
-public class OFII_26_重排链表_mid {
+public class LC138_复制带随机指针的链表_mid {
 }
