@@ -1,5 +1,4 @@
 package cn.jjx.coding.leetcode.classification.math_bit;
 
-public class OFII_1_整数除法_easy {
-
+public class LC318_最大单词长度乘积_mid {
 }
