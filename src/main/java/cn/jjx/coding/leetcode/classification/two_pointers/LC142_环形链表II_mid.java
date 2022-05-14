@@ -2,7 +2,7 @@ package cn.jjx.coding.leetcode.classification.two_pointers;
 
 import cn.jjx.coding.leetcode.data_structure.ListNode;
 
-public class OFII_22链表中环的入口节点_mid {
+public class LC142_环形链表II_mid {
 
     public ListNode detectCycle(ListNode head) {
         if(head == null) return null;
