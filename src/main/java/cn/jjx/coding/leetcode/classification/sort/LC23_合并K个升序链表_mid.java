@@ -1,4 +1,4 @@
 package cn.jjx.coding.leetcode.classification.sort;
 
-public class OFII_78_合并排序链表_hard {
+public class LC23_合并K个升序链表_mid {
 }
