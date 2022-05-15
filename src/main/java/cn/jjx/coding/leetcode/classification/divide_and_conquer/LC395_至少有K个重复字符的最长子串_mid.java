@@ -1,0 +1,4 @@
+package cn.jjx.coding.leetcode.classification.divide_and_conquer;
+
+public class LC395_至少有K个重复字符的最长子串_mid {
+}
