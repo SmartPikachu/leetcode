@@ -1,23 +1,23 @@
 package cn.jjx.coding.leetcode.classification.aatest;
 
+import lombok.val;
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
 public class Solution {
     public static void main(String[] args) {
 
-        Integer a = 1;
-        Integer b = 2;
-        Integer c = 3;
-        Integer d = 3;
-        Integer e = 321;
-        Integer f = 321;
-        Long g = 3L;
-        System.out.println(c == d);
-        System.out.println(e == f);
-        System.out.println(c == (a + b));
-        System.out.println(c.equals(a + b));
-        System.out.println(g == (a + b));
-        System.out.println(g.equals(a + b));
+        List<Integer> list = new ArrayList<>();
+        list.add(0,0);
+        list.add(0,1);
+        list.add(0,2);
+        Iterator it = list.iterator();
+        while(it.hasNext()){
+            System.out.println(it.next());
+        }
 
     }
 }
