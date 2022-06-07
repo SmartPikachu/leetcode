@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class LC539_最小时间差_mid {
+
     public int findMinDifference(List<String> timePoints) {
         Collections.sort(timePoints);
         int ans = Integer.MAX_VALUE;
@@ -21,4 +22,5 @@ public class LC539_最小时间差_mid {
     public int getMinutes(String t) {
         return ((t.charAt(0) - '0') * 10 + (t.charAt(1) - '0')) * 60 + (t.charAt(3) - '0') * 10 + (t.charAt(4) - '0');
     }
+
 }
