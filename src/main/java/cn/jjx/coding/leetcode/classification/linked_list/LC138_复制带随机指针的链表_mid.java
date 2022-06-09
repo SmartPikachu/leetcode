@@ -19,6 +19,7 @@ public class LC138_复制带随机指针的链表_mid {
 
     Map<Node, Node> cachedNode = new HashMap<Node, Node>();
 
+    //回溯+哈希表
     public Node copyRandomList(Node head) {
         if (head == null) {
             return null;
@@ -33,6 +34,7 @@ public class LC138_复制带随机指针的链表_mid {
     }
 
 
+    //迭代+节点拆分
     public Node copyRandomList1(Node head) {
         if (head == null) {
             return null;
