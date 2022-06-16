@@ -23,6 +23,7 @@ public class OF_59_II_队列的最大值_mid {
         }
 
         public void push_back(int value) {
+            //这边是一个单调队列
             while (!d.isEmpty() && d.peekLast() < value) {
                 d.pollLast();
             }
