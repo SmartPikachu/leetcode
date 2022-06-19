@@ -14,7 +14,8 @@ public class LC159_至多包含两个不同字符的最长子串_mid {
         int right = 0;
         // hashmap character -> its rightmost position
         // in the sliding window
-        HashMap<Character, Integer> hashmap = new HashMap<Character, Integer>();
+        HashMap<Character, Integer> hashmap =
+                new HashMap<>();
 
         int max_len = 2;
 
