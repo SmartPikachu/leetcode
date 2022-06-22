@@ -40,7 +40,7 @@ public class LC295_数据流的中位数_hard {
 
 
 
-    //方法二：有序集合 + 双指针
+    //方法二：有序集合 + 双指针,感觉比较难于理解
     class MedianFinder1 {
         TreeMap<Integer, Integer> nums;
         int n;
