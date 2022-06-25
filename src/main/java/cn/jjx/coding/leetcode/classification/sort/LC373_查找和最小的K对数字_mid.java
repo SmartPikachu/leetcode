@@ -22,6 +22,7 @@ public class LC373_查找和最小的K对数字_mid {
             list.add(nums1[idxPair[0]]);
             list.add(nums2[idxPair[1]]);
             ans.add(list);
+            //这块要注意了，其实是(0,1)-(0,n)
             if (idxPair[1] + 1 < n) {
                 pq.offer(new int[]{idxPair[0], idxPair[1] + 1});
             }
