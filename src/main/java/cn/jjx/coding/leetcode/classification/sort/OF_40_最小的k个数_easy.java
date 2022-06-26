@@ -1,6 +1,5 @@
 package cn.jjx.coding.leetcode.classification.sort;
 
-import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Random;
 
@@ -8,6 +7,7 @@ public class OF_40_最小的k个数_easy {
 
     //基于快速排序的方法
     class Solution {
+
         public int[] getLeastNumbers(int[] arr, int k) {
             randomizedSelected(arr, 0, arr.length - 1, k);
             int[] vec = new int[k];
@@ -41,15 +41,15 @@ public class OF_40_最小的k个数_easy {
 
         private int partition(int[] nums, int l, int r) {
             int pivot = nums[r];
-            int i = l - 1;
+            int i = l;
             for (int j = l; j <= r - 1; ++j) {
                 if (nums[j] <= pivot) {
-                    i = i + 1;
                     swap(nums, i, j);
+                    i++;
                 }
             }
-            swap(nums, i + 1, r);
-            return i + 1;
+            swap(nums, i , r);
+            return i;
         }
 
         private void swap(int[] nums, int i, int j) {
@@ -57,6 +57,7 @@ public class OF_40_最小的k个数_easy {
             nums[i] = nums[j];
             nums[j] = temp;
         }
+
     }
 
 
