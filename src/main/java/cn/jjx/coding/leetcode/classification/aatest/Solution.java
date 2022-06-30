@@ -1,23 +1,56 @@
 package cn.jjx.coding.leetcode.classification.aatest;
 
-import lombok.val;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
 
 public class Solution {
+
+
+
+    public void test(){
+        Sub sub = new Sub();
+        Sub sub1 = new Suber();
+
+        System.out.println(sub.getFiled());
+        System.out.println(sub1.getFiled());
+        System.out.println(sub.filed);
+
+
+        Father father = new Father();
+        Father father1 = new Son();
+
+//        System.out.println(father1.getField());
+//        System.out.println(father.getField());
+    }
+
+
     public static void main(String[] args) {
+        Sub sub = new Sub();
+        Sub sub1 = new Suber();
 
-        List<Integer> list = new ArrayList<>();
-        list.add(0,0);
-        list.add(0,1);
-        list.add(0,2);
-        Iterator it = list.iterator();
-        while(it.hasNext()){
-            System.out.println(it.next());
-        }
+        System.out.println(sub.getFiled());
+        System.out.println(sub1.getFiled());
+        Father father = new Father();
+        Father father1 = new Son();
+        System.out.println(father.field);
 
+
+
+    }
+}
+
+class Sub{
+    public int filed=0;
+    public int getFiled(){
+        return filed+100;
+    }
+    private static int xx(){
+        return 111;
+    }
+}
+
+class  Suber extends Sub{
+    public int filed=1;
+    public int getFiled(){
+        return filed;
     }
 }
