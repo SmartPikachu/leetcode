@@ -20,7 +20,7 @@ public class LC212_单词搜索II_hard {
                 }
             }
 
-            return new ArrayList<String>(ans);
+            return new ArrayList<>(ans);
         }
 
         public void dfs(char[][] board, Trie now,
@@ -49,7 +49,6 @@ public class LC212_单词搜索II_hard {
     class Trie {
         String word;
         Map<Character, Trie> children;
-        boolean isWord;
 
         public Trie() {
             this.word = "";
