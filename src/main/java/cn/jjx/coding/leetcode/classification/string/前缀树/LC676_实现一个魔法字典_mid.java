@@ -4,7 +4,7 @@ import java.util.*;
 
 public class LC676_实现一个魔法字典_mid {
 
-    //官方题解，其实
+    //官方题解，其实很简单就是利用一个HashMap和HashSet
     public class MagicDictionary {
         Set<String> words;
         Map<String, Integer> count;
