@@ -3,6 +3,8 @@ package cn.jjx.coding.leetcode.classification.string.前缀树;
 import java.util.*;
 
 public class LC676_实现一个魔法字典_mid {
+
+    //官方题解，其实
     public class MagicDictionary {
         Set<String> words;
         Map<String, Integer> count;
@@ -42,5 +44,6 @@ public class LC676_实现一个魔法字典_mid {
             return false;
         }
     }
+
 
 }
