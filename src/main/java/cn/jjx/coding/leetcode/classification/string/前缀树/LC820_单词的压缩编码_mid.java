@@ -5,6 +5,7 @@ import java.util.Map;
 
 public class LC820_单词的压缩编码_mid {
 
+    //这道题其实是储存后缀，然后把最长的后缀和累加，最长的后缀的count=0;
     class Solution {
         public int minimumLengthEncoding(String[] words) {
             TrieNode trie = new TrieNode();
