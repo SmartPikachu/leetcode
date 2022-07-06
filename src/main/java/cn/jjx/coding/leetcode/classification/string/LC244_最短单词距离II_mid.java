@@ -7,6 +7,7 @@ import java.util.Map;
 
 public class LC244_最短单词距离II_mid {
 
+    //哈希表+双指针
     class WordDistance {
         Map<String, List<Integer>> indicesMap =
                 new HashMap<String, List<Integer>>();
