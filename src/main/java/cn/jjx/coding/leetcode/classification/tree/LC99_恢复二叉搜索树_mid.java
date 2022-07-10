@@ -9,6 +9,41 @@ import java.util.List;
 
 public class LC99_恢复二叉搜索树_mid {
 
+    //隐式中序遍历，非递归的方法，感觉这种方法更简洁。
+    class Solution1 {
+        public void recoverTree(TreeNode root) {
+            Deque<TreeNode> stack = new ArrayDeque<TreeNode>();
+            TreeNode x = null, y = null, pred = null;
+
+            while (!stack.isEmpty() || root != null) {
+                while (root != null) {
+                    stack.push(root);
+                    root = root.left;
+                }
+                root = stack.pop();
+                if (pred != null && root.val < pred.val) {
+                    y = root;
+                    if (x == null) {
+                        x = pred;
+                    } else {
+                        break;
+                    }
+                }
+                pred = root;
+                root = root.right;
+            }
+
+            swap(x, y);
+        }
+
+        public void swap(TreeNode x, TreeNode y) {
+            int tmp = x.val;
+            x.val = y.val;
+            y.val = tmp;
+        }
+    }
+
+
     //显式中序遍历
     class Solution {
         public void recoverTree(TreeNode root) {
@@ -57,42 +92,6 @@ public class LC99_恢复二叉搜索树_mid {
             }
         }
     }
-
-
-    //隐式中序遍历
-    class Solution1 {
-        public void recoverTree(TreeNode root) {
-            Deque<TreeNode> stack = new ArrayDeque<TreeNode>();
-            TreeNode x = null, y = null, pred = null;
-
-            while (!stack.isEmpty() || root != null) {
-                while (root != null) {
-                    stack.push(root);
-                    root = root.left;
-                }
-                root = stack.pop();
-                if (pred != null && root.val < pred.val) {
-                    y = root;
-                    if (x == null) {
-                        x = pred;
-                    } else {
-                        break;
-                    }
-                }
-                pred = root;
-                root = root.right;
-            }
-
-            swap(x, y);
-        }
-
-        public void swap(TreeNode x, TreeNode y) {
-            int tmp = x.val;
-            x.val = y.val;
-            y.val = tmp;
-        }
-    }
-
 
 
 }
