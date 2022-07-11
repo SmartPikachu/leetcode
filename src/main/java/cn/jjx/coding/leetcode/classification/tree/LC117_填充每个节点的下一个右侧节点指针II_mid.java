@@ -26,7 +26,7 @@ public class LC117_填充每个节点的下一个右侧节点指针II_mid {
     };
 
 
-    //方法一，采用层序遍历的方式
+    //方法一，采用层序遍历的方式，这道题与116的差别就是这棵树不是一个完美二叉树
     class Solution {
         public Node connect(Node root) {
             if (root == null) {
@@ -56,7 +56,7 @@ public class LC117_填充每个节点的下一个右侧节点指针II_mid {
     }
 
 
-    //方法二，采用next指针的方式，在上一层为下一层创建next指针。
+    //方法二，采用next指针的方式，在上一层为下一层创建next指针。这道题与116的差别就是这棵树不是一个完美二叉树
     class Solution1 {
         Node last = null, nextStart = null;
 
