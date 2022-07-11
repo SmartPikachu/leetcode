@@ -32,7 +32,6 @@ public class LC662_二叉树的最大宽度_mid {
             // 改变根结点的值
             root.val=0;
             while(!queue.isEmpty()){
-                TreeNode k=new TreeNode();
                 // 记录当前队列中的个数
                 int cout=queue.size();
                 //创建一个变量来计算每层的宽度
