@@ -16,7 +16,6 @@ public class LC662_二叉树的最大宽度_mid {
      * 则父节点的左孩子节点的序号：2*i+1   父节点的左孩子节点的序号：2*i+2;
      * 所以每层的宽度就可以使用：每层最后一个节点的值减去最后一个节点的值+1
      */
-
     class Solution {
         public int widthOfBinaryTree(TreeNode root) {
             // 避免异常的产生
