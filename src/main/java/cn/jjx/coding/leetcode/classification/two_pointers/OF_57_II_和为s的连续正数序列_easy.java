@@ -5,7 +5,7 @@ import java.util.List;
 
 public class OF_57_II_和为s的连续正数序列_easy {
 
-    //采用双指针的方法
+    //采用双指针的方法，代码很清晰。
     public int[][] findContinuousSequence(int target) {
         List<int[]> vec = new ArrayList<int[]>();
         for (int l = 1, r = 2; l < r;) {
