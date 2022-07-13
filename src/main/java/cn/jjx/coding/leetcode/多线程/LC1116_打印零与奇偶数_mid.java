@@ -9,7 +9,12 @@ import java.util.function.IntConsumer;
 
 public class LC1116_打印零与奇偶数_mid {
 
-    //使用synchronized的解法
+    /**
+     * 这道题可以作为多线程编程的一个练手的题，题解主要参考sychronized和Thred.yield这两种方法。
+     * 后面的应用多线程的api可以后面研究。
+     */
+
+    //使用synchronized的解法，这种方法比较容易理解。
     class ZeroEvenOdd {
         private int n;
         private volatile int flag = 1;
@@ -18,6 +23,7 @@ public class LC1116_打印零与奇偶数_mid {
             this.n = n;
         }
 
+        //这个是打印0
         // printNumber.accept(x) outputs "x", where x is an integer.
         public void zero(IntConsumer printNumber) throws InterruptedException {
             for (int i=1; i<=n; i++) {
@@ -30,6 +36,7 @@ public class LC1116_打印零与奇偶数_mid {
             }
         }
 
+        //这个是打印偶数
         public void even(IntConsumer printNumber) throws InterruptedException {
             for (int i=2; i<=n; i+=2) {
                 synchronized (this) {
@@ -41,6 +48,7 @@ public class LC1116_打印零与奇偶数_mid {
             }
         }
 
+        //这个是打印奇数
         public void odd(IntConsumer printNumber) throws InterruptedException {
             for (int i=1; i<=n; i+=2) {
                 synchronized(this) {
@@ -52,6 +60,57 @@ public class LC1116_打印零与奇偶数_mid {
             }
         }
     }
+
+
+    //采用Thread.yield的无锁编程的方法，很巧妙，特别是zero方法。
+    class ZeroEvenOdd0 {
+
+        private int n;
+
+        private volatile int state;
+
+        public ZeroEvenOdd0(int n) {
+            this.n = n;
+        }
+
+        //打印0，本质是从0,1,2,3,4轮流切换奇数偶数，0切到奇数，1切到偶数，2切到奇数，3切到偶数
+        public void zero(IntConsumer printNumber) throws InterruptedException {
+            for (int i = 0; i < n; i++) {
+                while (state != 0) {
+                    Thread.yield();
+                }
+                printNumber.accept(0);
+                if (i % 2 == 0) {
+                    state = 1;
+                } else {
+                    state = 2;
+                }
+            }
+        }
+
+        //打印偶数
+        public void even(IntConsumer printNumber) throws InterruptedException {
+            for (int i = 2; i <= n; i += 2) {
+                while (state != 2) {
+                    Thread.yield();
+                }
+                printNumber.accept(i);
+                state = 0;
+            }
+        }
+
+        //打印奇数
+        public void odd(IntConsumer printNumber) throws InterruptedException {
+            for (int i = 1; i <= n; i += 2) {
+                while (state != 1) {
+                    Thread.yield();
+                }
+                printNumber.accept(i);
+                state = 0;
+            }
+        }
+    }
+
 
 
     //使用LockSupport的方法
