@@ -5,7 +5,7 @@ import java.util.List;
 
 public class LC54_螺旋矩阵_mid {
 
-    //模拟，这种方法就很好，根据边界去确定转向，根据格子总数，去循环。
+    //模拟，这种方法就很好，首先根据格子总数去循环，然后方向根据边界条件转换。
     public List<Integer> spiralOrder(int[][] matrix) {
         List<Integer> order = new ArrayList<>();
         if(matrix==null || matrix.length==0 || matrix[0].length==0) return order;
@@ -31,7 +31,7 @@ public class LC54_螺旋矩阵_mid {
     }
 
 
-    //按照层去模拟
+    //按照层去模拟，首先确定你走的路线的分层，然后确定边界条件去遍历。
     public List<Integer> spiralOrder1(int[][] matrix) {
         List<Integer> order = new ArrayList<>();
         if(matrix==null || matrix.length==0 || matrix[0].length==0) return order;
