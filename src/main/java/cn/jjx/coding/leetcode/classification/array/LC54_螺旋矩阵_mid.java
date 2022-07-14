@@ -5,7 +5,7 @@ import java.util.List;
 
 public class LC54_螺旋矩阵_mid {
 
-    //模拟
+    //模拟，这种方法就很好，根据边界去确定转向，根据格子总数，去循环。
     public List<Integer> spiralOrder(int[][] matrix) {
         List<Integer> order = new ArrayList<>();
         if(matrix==null || matrix.length==0 || matrix[0].length==0) return order;
