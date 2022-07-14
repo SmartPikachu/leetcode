@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.string.线段树和树状数组;
+package cn.jjx.coding.leetcode.classification.graph.线段树和树状数组;
 
 public class LC307_区域和检索_数组可修改_mid {
 
