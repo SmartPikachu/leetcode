@@ -1,6 +1,8 @@
 package cn.jjx.coding.leetcode.classification.array;
 
 public class LC189_旋转数组_mid {
+
+    //旋转技巧
     public void rotate(int[] nums, int k) {
         k %= nums.length;
         reverse(nums, 0, nums.length - 1);

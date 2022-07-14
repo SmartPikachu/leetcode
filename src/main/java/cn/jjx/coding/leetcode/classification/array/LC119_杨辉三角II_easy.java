@@ -5,6 +5,7 @@ import java.util.List;
 
 public class LC119_杨辉三角II_easy {
 
+    //和118几乎完全一样
     public List<Integer> getRow(int rowIndex) {
         List<Integer> pre = new ArrayList<Integer>();
         for (int i = 0; i <= rowIndex; ++i) {
@@ -20,4 +21,5 @@ public class LC119_杨辉三角II_easy {
         }
         return pre;
     }
+
 }

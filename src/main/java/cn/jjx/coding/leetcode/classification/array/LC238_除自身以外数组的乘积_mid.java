@@ -2,6 +2,8 @@ package cn.jjx.coding.leetcode.classification.array;
 
 public class LC238_除自身以外数组的乘积_mid {
 
+    //这个是官方的方法二，已经优化过得题解
+    // 分别计算左乘积和右乘积，然后左右乘积之和就是结果。
     public int[] productExceptSelf(int[] nums) {
         int length = nums.length;
         int[] answer = new int[length];
