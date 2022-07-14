@@ -2,6 +2,7 @@ package cn.jjx.coding.leetcode.classification.array;
 
 public class LC31_下一个排列_mid {
 
+    //采用两次扫描的方法，交换完别忘记重排序。
     public void nextPermutation(int[] nums) {
         int i = nums.length - 2;
         while (i >= 0 && nums[i] >= nums[i + 1]) {
