@@ -1,6 +1,8 @@
 package cn.jjx.coding.leetcode.classification.array;
 
 public class LC73_矩阵置零_mid {
+
+    //建议参考官方题解二，思路比较简单
     public void setZeroes(int[][] matrix) {
         int m = matrix.length, n = matrix[0].length;
         boolean flagCol0 = false, flagRow0 = false;
@@ -39,4 +41,5 @@ public class LC73_矩阵置零_mid {
             }
         }
     }
+
 }
