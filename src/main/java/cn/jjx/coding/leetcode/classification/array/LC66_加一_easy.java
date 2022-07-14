@@ -7,6 +7,7 @@ public class LC66_加一_easy {
         for (int i = n - 1; i >= 0; --i) {
             if (digits[i] != 9) {
                 ++digits[i];
+                //这写的很巧妙，把9的进位变成0.
                 for (int j = i + 1; j < n; ++j) {
                     digits[j] = 0;
                 }
