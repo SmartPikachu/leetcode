@@ -13,12 +13,14 @@ public class LC259_较小的三数之和_mid {
         return sum;
     }
 
+    //计算两数之和小于目标的
     private int twoSumSmaller(int[] nums, int startIndex, int target) {
         int sum = 0;
         int left = startIndex;
         int right = nums.length - 1;
         while (left < right) {
             if (nums[left] + nums[right] < target) {
+                //这块可以看成左指针不动，又指针向左移。
                 sum += right - left;
                 left++;
             } else {
