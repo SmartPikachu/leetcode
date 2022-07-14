@@ -5,6 +5,7 @@ import java.util.List;
 
 public class LC57_插入区间_mid {
 
+    //注意区间的合并，并且设置一个标记代表已经把要插入的数组插入。
     public int[][] insert(int[][] intervals, int[] newInterval) {
         int left = newInterval[0];
         int right = newInterval[1];
