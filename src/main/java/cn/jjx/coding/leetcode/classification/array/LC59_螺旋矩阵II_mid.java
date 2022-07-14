@@ -2,6 +2,7 @@ package cn.jjx.coding.leetcode.classification.array;
 
 public class LC59_螺旋矩阵II_mid {
 
+    //这道题和54题的方法一是一样的，就是采用模拟的方法，把每个值填入表格中。
     public int[][] generateMatrix(int n) {
         int maxNum = n * n;
         int curNum = 1;
