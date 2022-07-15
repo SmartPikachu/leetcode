@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.array;
+package cn.jjx.coding.leetcode.classification.array.旋转变换;
 
 public class LC498_对角线遍历_mid {
 

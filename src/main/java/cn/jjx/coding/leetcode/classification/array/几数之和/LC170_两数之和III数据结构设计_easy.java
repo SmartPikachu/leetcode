@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.array;
+package cn.jjx.coding.leetcode.classification.array.几数之和;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,7 +7,6 @@ import java.util.Map;
 
 public class LC170_两数之和III数据结构设计_easy {
 
-    //方法一采用双指针的方法。
     class TwoSum {
         private ArrayList<Integer> nums;
         private boolean is_sorted;

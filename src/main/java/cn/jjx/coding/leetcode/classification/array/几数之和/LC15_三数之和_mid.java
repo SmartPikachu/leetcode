@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.array;
+package cn.jjx.coding.leetcode.classification.array.几数之和;
 
 import java.util.ArrayList;
 import java.util.Arrays;

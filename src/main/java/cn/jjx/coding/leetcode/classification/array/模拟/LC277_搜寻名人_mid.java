@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.array;
+package cn.jjx.coding.leetcode.classification.array.模拟;
 
 public class LC277_搜寻名人_mid {
 

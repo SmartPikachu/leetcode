@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.array;
+package cn.jjx.coding.leetcode.classification.array.位运算;
 
 import java.util.HashMap;
 import java.util.Map;

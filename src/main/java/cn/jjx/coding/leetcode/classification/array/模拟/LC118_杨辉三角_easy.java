@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.array;
+package cn.jjx.coding.leetcode.classification.array.模拟;
 
 import java.util.ArrayList;
 import java.util.List;

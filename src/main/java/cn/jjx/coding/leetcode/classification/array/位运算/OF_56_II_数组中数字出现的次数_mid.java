@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.array;
+package cn.jjx.coding.leetcode.classification.array.位运算;
 
 public class OF_56_II_数组中数字出现的次数_mid {
 

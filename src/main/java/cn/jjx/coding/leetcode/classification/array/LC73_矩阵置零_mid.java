@@ -2,7 +2,8 @@ package cn.jjx.coding.leetcode.classification.array;
 
 public class LC73_矩阵置零_mid {
 
-    //建议参考官方题解二，思路比较简单
+    //建议参考官方题解二，可以按照投影思考，把为0的投影到两个轴，
+    // 然后用两个变量记录这两个轴上是否存在零。
     public void setZeroes(int[][] matrix) {
         int m = matrix.length, n = matrix[0].length;
         boolean flagCol0 = false, flagRow0 = false;
