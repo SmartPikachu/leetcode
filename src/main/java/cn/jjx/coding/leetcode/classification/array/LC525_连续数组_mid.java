@@ -5,6 +5,10 @@ import java.util.Map;
 
 public class LC525_连续数组_mid {
 
+    /**
+     *规定空的前缀的结束下标为 -1，由于空的前缀的元素和为 0，因此在遍历之前，首先在哈希表中存入键值对 (0,-1)
+     * 这道题采用的方法是前缀和+哈希表的方法，如果两个前缀和相等，那么他们之差的和就为零。
+     */
     public int findMaxLength(int[] nums) {
         int maxLength = 0;
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
@@ -27,4 +31,5 @@ public class LC525_连续数组_mid {
         }
         return maxLength;
     }
+
 }

@@ -5,6 +5,7 @@ import java.util.Set;
 
 public class OF_61_统计扑克牌中的顺子_easy {
 
+    //就是一个简单的hashset没什么难度。
     public boolean isStraight(int[] nums) {
         Set<Integer> repeat = new HashSet<>();
         int max = 0, min = 14;

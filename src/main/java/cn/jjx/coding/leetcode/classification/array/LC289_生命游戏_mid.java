@@ -1,6 +1,9 @@
 package cn.jjx.coding.leetcode.classification.array;
 
 public class LC289_生命游戏_mid {
+
+    //这道题太巧妙了，设置-1和2两个额外的状态，-1表示过去活的将来变成死的，
+    // 2表示过去是死的，将来是活的，然后它利用绝对值来判断细胞是否活的，巧妙啊。
     public void gameOfLife(int[][] board) {
         int[] neighbors = {0, 1, -1};
 

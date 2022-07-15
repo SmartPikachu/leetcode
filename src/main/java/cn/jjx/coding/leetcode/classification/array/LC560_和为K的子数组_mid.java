@@ -2,6 +2,7 @@ package cn.jjx.coding.leetcode.classification.array;
 
 import java.util.HashMap;
 
+//前缀和+哈希表的解法
 public class LC560_和为K的子数组_mid {
     public int subarraySum(int[] nums, int k) {
         int count=0,pre=0;

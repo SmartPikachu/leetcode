@@ -4,7 +4,24 @@ import java.util.Arrays;
 
 public class LC713_乘积小于K的子数组_mid {
 
+    //滑动窗口的方法，官方题解方法二。滑动窗口理解了，就会理解方法一。
+    public int numSubarrayProductLessThanK(int[] nums, int k) {
+        int n=nums.length,ret=0;
+        int prod = 1,i=0;
+        for(int j=0;j<n;j++){
+            prod*=nums[j];
+            while(i<=j&&prod>=k){
+                prod/=nums[i];
+                i++;
+            }
+            ret+=j-i+1;
+        }
+        return ret;
+    }
+
+
     /**
+     * 官方题解方法一，采用二分法结合前缀和
      * double 类型只能保证15位有效数字是精确的。为了避免计算带来的误差，
      * 我们将不等式 logPrefix[l]>logPrefix[j+1]−logk 的右边加上 10^{-10}
      * 题目中的double 数值整数部分的数字不超过 5 个），
@@ -12,8 +29,7 @@ public class LC713_乘积小于K的子数组_mid {
      * 从而防止不等式两边数值相等却被判定为大于的情况。
      */
 
-    //二分法
-    public int numSubarrayProductLessThanK(int[] nums, int k) {
+    public int numSubarrayProductLessThanK1(int[] nums, int k) {
         if(k==0) return 0;
         int n=nums.length;
         double[] logPrefix=new double[n+1];
@@ -42,18 +58,5 @@ public class LC713_乘积小于K的子数组_mid {
     }
 
 
-    //滑动窗口的方法
-    public int numSubarrayProductLessThanK1(int[] nums, int k) {
-        int n=nums.length,ret=0;
-        int prod = 1,i=0;
-        for(int j=0;j<n;j++){
-            prod*=nums[j];
-            while(i<=j&&prod>=k){
-                prod/=nums[i];
-                i++;
-            }
-            ret+=j-i+1;
-        }
-        return ret;
-    }
+
 }

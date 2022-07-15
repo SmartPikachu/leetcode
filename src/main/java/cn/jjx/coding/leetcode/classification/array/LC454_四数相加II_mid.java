@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LC454_四数相加II_mid {
+
+    //这道题就是hash表的典型应用，先把A+B的和求出，然后用A+B的map去判断C+D的值，方法非常巧妙。
     public int fourSumCount(int[] A, int[] B, int[] C, int[] D) {
         Map<Integer, Integer> countAB = new HashMap<Integer, Integer>();
         for (int u : A) {

@@ -2,32 +2,34 @@ package cn.jjx.coding.leetcode.classification.array;
 
 public class LC498_对角线遍历_mid {
 
-    //本题并没有选择官方题解
-    public int[] findDiagonalOrder(int[][] matrix) {
-        if (matrix == null || matrix.length == 0) return new int[0];
-
-        int m = matrix.length;
-        int n = matrix[0].length;
-        int[] nums = new int[m * n];
-
-        int k = 0;
-        boolean bXFlag = true;
-        for (int i = 0; i < m+n-1; i++){
-            int pm = bXFlag ? m : n;
-            int pn = bXFlag ? n : m;
-
-            int x = (i < pm) ? i : pm - 1;
-            int y = i - x;
-
-            while (x >= 0 && y < pn){
-                nums[k++] = bXFlag ? matrix[x][y] : matrix[y][x];
-                x--;
-                y++;
+    //官方题解，首先是m+n-1条线，然后x,y应该是每次的起点。
+    //注意这里的x对应的是m,y对应的是n,官方题解很清晰的。
+    public int[] findDiagonalOrder(int[][] mat) {
+        int m = mat.length;
+        int n = mat[0].length;
+        int[] res = new int[m * n];
+        int pos = 0;
+        for (int i = 0; i < m + n - 1; i++) {
+            if (i % 2 == 1) {
+                int x = i < n ? 0 : i - n + 1;
+                int y = i < n ? i : n - 1;
+                while (x < m && y >= 0) {
+                    res[pos] = mat[x][y];
+                    pos++;
+                    x++;
+                    y--;
+                }
+            } else {
+                int x = i < m ? i : m - 1;
+                int y = i < m ? 0 : i - m + 1;
+                while (x >= 0 && y < n) {
+                    res[pos] = mat[x][y];
+                    pos++;
+                    x--;
+                    y++;
+                }
             }
-
-            bXFlag = !bXFlag;
         }
-
-        return nums;
+        return res;
     }
 }
