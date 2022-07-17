@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class LC17_电话号码的字母组合_mid {
+
     //这题定义map的时候有个初始化，用大括号组成一段初始化代码，可以学习一下。
     public List<String> letterCombinations(String digits) {
         List<String> combinations = new ArrayList<String>();
