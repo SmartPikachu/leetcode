@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class LC47_全排列II_mid {
+
     boolean[] vis;
 
     public List<List<Integer>> permuteUnique(int[] nums) {
@@ -22,6 +23,7 @@ public class LC47_全排列II_mid {
             return;
         }
         for (int i = 0; i < nums.length; ++i) {
+            //这处代码要注意一定是vis[i-1]为false才可以跳过，避免出现11已经出现，然后第二次还能11
             if (vis[i] || (i > 0 && nums[i] == nums[i - 1] && !vis[i - 1])) {
                 continue;
             }

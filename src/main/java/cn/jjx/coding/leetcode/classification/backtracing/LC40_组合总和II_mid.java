@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class LC40_组合总和II_mid {
+
+    //需要记录一下数字的频率，其实这块我觉得用hashmap其实更好。
     List<int[]> freq = new ArrayList<int[]>();
     List<List<Integer>> ans = new ArrayList<List<Integer>>();
     List<Integer> sequence = new ArrayList<Integer>();

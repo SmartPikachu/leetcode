@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class LC52_N皇后II_hard {
+
     public int totalNQueens(int n) {
         Set<Integer> columns = new HashSet<Integer>();
         Set<Integer> diagonals1 = new HashSet<Integer>();
