@@ -1,9 +1,10 @@
-package cn.jjx.coding.leetcode.classification.backtracing;
+package cn.jjx.coding.leetcode.classification.backtracing.子集;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class LC78_子集_mid {
+
     List<Integer> list = new ArrayList<>();
     List<List<Integer>> ans = new ArrayList<List<Integer>>();
     public List<List<Integer>> subsets(int[] nums) {
@@ -22,4 +23,5 @@ public class LC78_子集_mid {
         //递归，如果不取cur位置的元素
         dfs(cur+1,nums);
     }
+
 }

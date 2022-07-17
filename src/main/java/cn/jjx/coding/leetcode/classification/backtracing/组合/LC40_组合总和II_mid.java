@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.backtracing;
+package cn.jjx.coding.leetcode.classification.backtracing.组合;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,7 +7,7 @@ import java.util.List;
 public class LC40_组合总和II_mid {
 
     //需要记录一下数字的频率，其实这块我觉得用hashmap其实更好。
-    List<int[]> freq = new ArrayList<int[]>();
+    List<int[]> freq = new ArrayList<>();
     List<List<Integer>> ans = new ArrayList<List<Integer>>();
     List<Integer> sequence = new ArrayList<Integer>();
 
@@ -27,7 +27,7 @@ public class LC40_组合总和II_mid {
 
     public void dfs(int pos, int rest) {
         if (rest == 0) {
-            ans.add(new ArrayList<Integer>(sequence));
+            ans.add(new ArrayList<>(sequence));
             return;
         }
         if (pos == freq.size() || rest < freq.get(pos)[0]) {

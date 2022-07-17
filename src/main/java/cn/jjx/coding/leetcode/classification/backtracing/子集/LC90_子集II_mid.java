@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.backtracing;
+package cn.jjx.coding.leetcode.classification.backtracing.子集;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,6 +6,7 @@ import java.util.List;
 
 public class LC90_子集II_mid {
 
+    //官方题解
     List<Integer> t = new ArrayList<Integer>();
     List<List<Integer>> ans = new ArrayList<List<Integer>>();
 

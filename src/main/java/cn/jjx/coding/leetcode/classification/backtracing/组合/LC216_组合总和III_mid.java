@@ -1,9 +1,10 @@
-package cn.jjx.coding.leetcode.classification.backtracing;
+package cn.jjx.coding.leetcode.classification.backtracing.组合;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class LC216_组合总和III_mid {
+
     List<Integer> temp = new ArrayList<Integer>();
     List<List<Integer>> ans = new ArrayList<List<Integer>>();
 

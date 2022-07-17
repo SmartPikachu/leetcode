@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.backtracing;
+package cn.jjx.coding.leetcode.classification.backtracing.排列;
 
 import java.util.ArrayList;
 import java.util.Arrays;
