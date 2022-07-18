@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LC282_给表达式添加运算符_hard {
+
     int n;
     String num;
     int target;
@@ -46,6 +47,8 @@ public class LC282_给表达式添加运算符_hard {
                 backtrack(expr, j + 1, res - mul + mul * val, mul * val);
             }
         }
+        //这一步是撤销之前的结果，也就是回溯。
         expr.setLength(signIndex);
     }
+
 }

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LC131_分割回文串_mid {
+
     int[][] f;
     List<List<String>> ret = new ArrayList<List<String>>();
     List<String> ans = new ArrayList<String>();
@@ -19,7 +20,7 @@ public class LC131_分割回文串_mid {
 
     public void dfs(String s, int i) {
         if (i == n) {
-            ret.add(new ArrayList<String>(ans));
+            ret.add(new ArrayList<>(ans));
             return;
         }
         for (int j = i; j < n; ++j) {

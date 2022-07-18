@@ -1,6 +1,7 @@
 package cn.jjx.coding.leetcode.classification.backtracing;
 
 public class LC79_单词搜索_mid {
+
     public boolean exist(char[][] board,String word){
         int h = board.length,w=board[0].length;
         boolean[][] visited = new boolean[h][w];

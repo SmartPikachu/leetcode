@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LC93_复原IP地址_mid {
+
     static final int SEG_COUNT = 4;
     List<String> ans = new ArrayList<String>();
     int[] segments = new int[SEG_COUNT];
 
     public List<String> restoreIpAddresses(String s) {
-        segments = new int[SEG_COUNT];
         dfs(s, 0, 0);
         return ans;
     }
