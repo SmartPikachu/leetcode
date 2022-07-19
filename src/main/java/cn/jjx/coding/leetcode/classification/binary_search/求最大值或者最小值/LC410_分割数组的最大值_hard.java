@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.binary_search.计算;
+package cn.jjx.coding.leetcode.classification.binary_search.求最大值或者最小值;
 
 import java.util.Arrays;
 
