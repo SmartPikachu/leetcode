@@ -2,6 +2,7 @@ package cn.jjx.coding.leetcode.classification.binary_search;
 
 public class LC400_第N位数字_mid {
 
+    //这道题是个非典型的二分法，其实找到规律更重要，二不二分其实不重要，因为搜索范围就不大。
     public int findNthDigit(int n) {
         int low = 1, high = 9;
         while (low < high) {

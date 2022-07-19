@@ -2,34 +2,7 @@ package cn.jjx.coding.leetcode.classification.binary_search;
 
 public class LC240_搜索二维矩阵II_mid {
 
-    //方法一是通过二分查找,这个按照行搜索，感觉不如方法二效率高
-    public boolean searchMatrix(int[][] matrix, int target) {
-        for (int[] row : matrix) {
-            int index = search(row, target);
-            if (index >= 0) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public int search(int[] nums, int target) {
-        int low = 0, high = nums.length - 1;
-        while (low <= high) {
-            int mid = (high - low) / 2 + low;
-            int num = nums[mid];
-            if (num == target) {
-                return mid;
-            } else if (num > target) {
-                high = mid - 1;
-            } else {
-                low = mid + 1;
-            }
-        }
-        return -1;
-    }
-
-    //方法二是通过Z字型查找
+    //方法一是通过Z字型查找，这个是官方的题解的方法三。
     public boolean searchMatrix1(int[][] matrix, int target) {
         int m = matrix.length, n = matrix[0].length;
         int x = 0, y = n - 1;
@@ -42,6 +15,21 @@ public class LC240_搜索二维矩阵II_mid {
             } else {
                 ++x;
             }
+        }
+        return false;
+    }
+
+    //宫水三叶的二分法，不过明显不如上面的解法优秀。
+    public boolean searchMatrix(int[][] matrix, int target) {
+        int m = matrix.length, n = matrix[0].length;
+        for (int i = 0; i < m; i++) {
+            int l = 0, r = n - 1;
+            while (l < r) {
+                int mid = l + r + 1 >> 1;
+                if (matrix[i][mid] <= target) l = mid;
+                else r = mid - 1;
+            }
+            if (matrix[i][r] == target) return true;
         }
         return false;
     }

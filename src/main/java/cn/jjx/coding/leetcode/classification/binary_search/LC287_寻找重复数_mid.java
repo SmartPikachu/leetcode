@@ -23,4 +23,39 @@ public class LC287_寻找重复数_mid {
         return ans;
     }
 
+
+    //李为为开区间的解法。
+    class Solution {
+
+        public int findDuplicate(int[] nums) {
+            int len = nums.length; // n + 1 = len, n = len - 1
+
+            // 在 [1..n] 查找 nums 中重复的元素
+            int left = 1;
+            int right = len - 1;
+            while (left < right) {
+                int mid = (left + right) / 2;
+
+                // nums 中小于等于 mid 的元素的个数
+                int count = 0;
+                for (int num : nums) {
+                    if (num <= mid) {
+                        count++;
+                    }
+                }
+
+                if (count > mid) {
+                    // 下一轮搜索的区间 [left..mid]
+                    right = mid;
+                } else {
+                    // 下一轮搜索的区间 [mid + 1..right]
+                    left = mid + 1;
+                }
+            }
+            return left;
+        }
+    }
+
+
+
 }
