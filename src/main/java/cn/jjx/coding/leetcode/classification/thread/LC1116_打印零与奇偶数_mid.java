@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.多线程;
+package cn.jjx.coding.leetcode.classification.thread;
 
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
