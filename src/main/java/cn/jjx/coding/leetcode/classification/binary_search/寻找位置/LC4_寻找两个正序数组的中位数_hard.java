@@ -3,10 +3,10 @@ package cn.jjx.coding.leetcode.classification.binary_search.寻找位置;
 public class LC4_寻找两个正序数组的中位数_hard {
 
     class Solution {
-
         /**
          * 题解中有处不对，如果是奇数则中位数索引是m+n/2,如果是偶数则中位数索引是m+n/2-1和m+n/2。
          * 然后把找到索引是m+n/2的数变成了找到第k小的元素，并且k>1
+         * 另外这题感觉是个求第k小元素的题，只是用二分法求，其实用堆排序求也行，只是空间复杂度更高。
          */
         public double findMedianSortedArrays(int[] nums1, int[] nums2) {
             int length1 = nums1.length, length2 = nums2.length;
