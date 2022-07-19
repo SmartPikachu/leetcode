@@ -49,7 +49,6 @@ public class LC410_分割数组的最大值_hard {
 
 
 
-
     //或者采用动态规划
     public int splitArray1(int[] nums,int m){
         int n = nums.length;
