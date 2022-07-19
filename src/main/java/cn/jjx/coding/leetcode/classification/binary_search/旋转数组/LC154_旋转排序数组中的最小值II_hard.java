@@ -2,6 +2,7 @@ package cn.jjx.coding.leetcode.classification.binary_search.旋转数组;
 
 public class LC154_旋转排序数组中的最小值II_hard {
 
+    //官方题解
     public int findMin(int[] nums) {
         int low = 0;
         int high = nums.length - 1;
