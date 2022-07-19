@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.binary_search.消费;
+package cn.jjx.coding.leetcode.classification.binary_search.计算;
 
 public class LC875_爱吃香蕉的珂珂_mid {
 

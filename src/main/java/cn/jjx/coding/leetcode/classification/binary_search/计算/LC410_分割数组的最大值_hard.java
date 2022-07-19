@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.binary_search.消费;
+package cn.jjx.coding.leetcode.classification.binary_search.计算;
 
 import java.util.Arrays;
 
