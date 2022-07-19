@@ -1,8 +1,9 @@
-package cn.jjx.coding.leetcode.classification.binary_search;
+package cn.jjx.coding.leetcode.classification.binary_search.消费;
 
 import java.util.Arrays;
 
 public class LC1011_在D天内送达包裹的能力_mid {
+
     public int shipWithinDays(int[] weights, int days) {
         // 确定二分查找左右边界
         int left = Arrays.stream(weights).max().getAsInt(), right = Arrays.stream(weights).sum();

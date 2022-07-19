@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class LC611_有效三角形的个数_mid {
 
+    //根据二分法，首先给数组排序，然后只要满足nums[i]+nums[j]>nums[k],找出k即可
     public int triangleNumber1(int[] nums) {
         int n = nums.length;
         Arrays.sort(nums);
@@ -26,7 +27,7 @@ public class LC611_有效三角形的个数_mid {
         return ans;
     }
 
-
+    //最优解，采用双指针，把i固定，然后调整j和k,代码非常优雅。
     public int triangleNumber(int[] nums) {
         int n = nums.length;
         Arrays.sort(nums);

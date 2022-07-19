@@ -1,6 +1,7 @@
-package cn.jjx.coding.leetcode.classification.binary_search;
+package cn.jjx.coding.leetcode.classification.binary_search.寻找位置;
 
 public class LC162_寻找峰值_mid {
+
     public int findPeakElement(int[] nums) {
         int n = nums.length;
         int l = 0, r = n - 1;

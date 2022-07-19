@@ -1,6 +1,7 @@
-package cn.jjx.coding.leetcode.classification.binary_search;
+package cn.jjx.coding.leetcode.classification.binary_search.寻找位置;
 
 public class LC378_有序矩阵中的第k小的元素_mid {
+
     public int kthSmallest(int[][] matrix, int k) {
         int n = matrix.length;
         int left = matrix[0][0];
@@ -31,4 +32,5 @@ public class LC378_有序矩阵中的第k小的元素_mid {
         }
         return num >= k;
     }
+
 }

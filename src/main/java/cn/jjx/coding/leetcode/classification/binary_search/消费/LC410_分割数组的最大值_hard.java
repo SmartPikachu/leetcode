@@ -1,9 +1,19 @@
-package cn.jjx.coding.leetcode.classification.binary_search;
+package cn.jjx.coding.leetcode.classification.binary_search.消费;
 
 import java.util.Arrays;
 
 public class LC410_分割数组的最大值_hard {
 
+    /**
+     *贪心地模拟分割的过程，从前到后遍历数组，用sum 表示当前分割子数组的和，
+     * cnt 表示已经分割出的子数组的数量（包括当前子数组），
+     * 那么每当 sum 加上当前值超过了x，我们就把当前取的值作为新的一段分割子数组的开头，
+     * 并将 cnt 加 1。遍历结束后验证是否 cnt不超过m。
+     * 这样我们可以用二分查找来解决。二分的上界为数组nums中所有元素的和，
+     * 下界为数组nums 中所有元素的最大值。通过二分查找，
+     * 我们可以得到最小的最大分割子数组和，这样就可以得到最终的答案了。
+     *
+     */
     public int splitArray(int[] nums, int m) {
         int left = 0, right = 0;
         for (int i = 0; i < nums.length; i++) {

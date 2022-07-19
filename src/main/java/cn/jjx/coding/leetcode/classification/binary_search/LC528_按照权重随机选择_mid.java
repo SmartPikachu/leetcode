@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class LC528_按照权重随机选择_mid {
 
     class Solution {
+
         int[] pre;
         int total;
 

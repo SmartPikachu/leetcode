@@ -1,6 +1,7 @@
-package cn.jjx.coding.leetcode.classification.binary_search;
+package cn.jjx.coding.leetcode.classification.binary_search.寻找位置;
 
 public class LC35_搜索插入位置_easy {
+
     public int searchInsert(int[] nums, int target) {
         int n = nums.length;
         int left = 0, right = n - 1, ans = n;
@@ -15,4 +16,5 @@ public class LC35_搜索插入位置_easy {
         }
         return ans;
     }
+
 }

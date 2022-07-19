@@ -2,7 +2,7 @@ package cn.jjx.coding.leetcode.classification.binary_search;
 
 public class LC240_搜索二维矩阵II_mid {
 
-    //方法一是通过二分查找
+    //方法一是通过二分查找,这个按照行搜索，感觉不如方法二效率高
     public boolean searchMatrix(int[][] matrix, int target) {
         for (int[] row : matrix) {
             int index = search(row, target);

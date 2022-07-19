@@ -30,7 +30,6 @@ public class 二分搜索模板 {
                 right=mid -1;
             }
         }
-
         //最后要检查左边界left越界的情况
         if(left>=nums.length || nums[left] != target)
             return -1;

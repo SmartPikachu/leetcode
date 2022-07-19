@@ -1,10 +1,16 @@
-package cn.jjx.coding.leetcode.classification.binary_search;
+package cn.jjx.coding.leetcode.classification.binary_search.寻找位置;
 
 public class LC34_在排序数组中查找元素的第一个和最后一个位置_mid {
+
+    /**
+     *如果lower为true，则查找第一个大于等于target的下标，
+     * 否则查找第一个大于target的下标。
+     */
     public int[] searchRange(int[] nums, int target) {
         int leftIdx = binarySearch(nums, target, true);
         int rightIdx = binarySearch(nums, target, false) - 1;
-        if (leftIdx <= rightIdx && rightIdx < nums.length && nums[leftIdx] == target && nums[rightIdx] == target) {
+        if (leftIdx <= rightIdx && rightIdx < nums.length &&
+                nums[leftIdx] == target && nums[rightIdx] == target) {
             return new int[]{leftIdx, rightIdx};
         }
         return new int[]{-1, -1};

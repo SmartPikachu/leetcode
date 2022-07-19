@@ -1,6 +1,7 @@
-package cn.jjx.coding.leetcode.classification.binary_search;
+package cn.jjx.coding.leetcode.classification.binary_search.旋转数组;
 
 public class LC81_搜索旋转排序数组II_mid {
+
     public boolean search(int[] nums, int target) {
         if(nums==null || nums.length==0){
             return false;
@@ -35,5 +36,6 @@ public class LC81_搜索旋转排序数组II_mid {
         }
         return false;
     }
+
 
 }

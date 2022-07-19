@@ -1,6 +1,7 @@
 package cn.jjx.coding.leetcode.classification.binary_search;
 
 public class LC287_寻找重复数_mid {
+
     public int findDuplicate(int[] nums){
         int n = nums.length;
         int left=0,right=n-1,ans=-1;
