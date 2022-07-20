@@ -1,6 +1,7 @@
 package cn.jjx.coding.leetcode.classification.design;
 
 public class LC208_实现Trie前缀树_mid {
+
     class Trie {
         private Trie[] children;
         private boolean isEnd;
@@ -45,6 +46,7 @@ public class LC208_实现Trie前缀树_mid {
             return node;
         }
     }
+
 }
 
 

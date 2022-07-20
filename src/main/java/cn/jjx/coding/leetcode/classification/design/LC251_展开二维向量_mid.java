@@ -2,6 +2,7 @@ package cn.jjx.coding.leetcode.classification.design;
 
 public class LC251_展开二维向量_mid {
 
+    //需要过滤掉空数组元素
     class Vector2D {
         int i = 0;
         int j = 0;

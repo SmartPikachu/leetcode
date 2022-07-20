@@ -4,31 +4,35 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 public class LC155_最小栈_easy {
-    Deque<Integer> xStack;
-    Deque<Integer> minStack;
 
-    public LC155_最小栈_easy() {
-        xStack = new LinkedList<Integer>();
-        minStack = new LinkedList<Integer>();
-        minStack.push(Integer.MAX_VALUE);
-    }
+    //需要一个辅助栈
+    class MinStack {
+        Deque<Integer> xStack;
+        Deque<Integer> minStack;
 
-    public void push(int x) {
-        xStack.push(x);
-        minStack.push(Math.min(minStack.peek(), x));
-    }
+        public MinStack() {
+            xStack = new LinkedList<Integer>();
+            minStack = new LinkedList<Integer>();
+            minStack.push(Integer.MAX_VALUE);
+        }
 
-    public void pop() {
-        xStack.pop();
-        minStack.pop();
-    }
+        public void push(int x) {
+            xStack.push(x);
+            minStack.push(Math.min(minStack.peek(), x));
+        }
 
-    public int top() {
-        return xStack.peek();
-    }
+        public void pop() {
+            xStack.pop();
+            minStack.pop();
+        }
 
-    public int getMin() {
-        return minStack.peek();
+        public int top() {
+            return xStack.peek();
+        }
+
+        public int getMin() {
+            return minStack.peek();
+        }
     }
 
 }

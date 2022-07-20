@@ -7,6 +7,7 @@ import java.util.Queue;
 
 public class LC281_锯齿迭代器_mid {
 
+    //使用队列和迭代器来实现交替迭代。
     class ZigzagIterator {
         Queue<Iterator<Integer>> queue = new LinkedList<>();
         public ZigzagIterator(List<Integer> v1, List<Integer> v2) {

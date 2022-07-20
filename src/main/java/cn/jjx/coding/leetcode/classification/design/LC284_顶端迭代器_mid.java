@@ -4,7 +4,9 @@ import java.util.Iterator;
 
 public class LC284_顶端迭代器_mid {
 
+    //这道题设置一个nextElement这处很巧妙。
     class PeekingIterator implements Iterator<Integer> {
+
         private Iterator<Integer> iterator;
         private Integer nextElement;
 
