@@ -6,6 +6,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class LC112_路径总和_easy {
+
+    //广度优先搜索
     public boolean hasPathSum(TreeNode root, int sum) {
         if (root == null) {
             return false;
@@ -41,7 +43,8 @@ public class LC112_路径总和_easy {
         if(root.left==null && root.right==null){
             return targetSum==root.val;
         }
-        return hasPathSum1(root.left,targetSum-root.val) || hasPathSum1(root.right,targetSum-root.val);
+        return hasPathSum1(root.left,targetSum-root.val) ||
+                hasPathSum1(root.right,targetSum-root.val);
     }
 
 }

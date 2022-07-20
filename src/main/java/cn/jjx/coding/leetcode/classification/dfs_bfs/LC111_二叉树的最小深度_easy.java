@@ -27,6 +27,7 @@ import java.util.Queue;
  *
  */
 
+//广度优先搜索
 public class LC111_二叉树的最小深度_easy {
     public int minDepth(TreeNode root) {
         if(root == null) return 0;
