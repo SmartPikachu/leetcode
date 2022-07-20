@@ -30,7 +30,7 @@ public class LC113_路径总和II_mid {
     }
 
 
-    //广度优先搜索
+    //广度优先搜索，值得看看。
     class Solution {
         List<List<Integer>> ret = new LinkedList<List<Integer>>();
         Map<TreeNode, TreeNode> map = new HashMap<TreeNode, TreeNode>();
