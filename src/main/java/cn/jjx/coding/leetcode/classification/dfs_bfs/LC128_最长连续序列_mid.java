@@ -5,6 +5,7 @@ import java.util.Set;
 
 public class LC128_最长连续序列_mid {
 
+    //利用哈希表解题
     public int longestConsecutive(int[] nums) {
         Set<Integer> num_set = new HashSet<Integer>();
         for (int num : nums) {
@@ -29,4 +30,5 @@ public class LC128_最长连续序列_mid {
 
         return longestStreak;
     }
+
 }

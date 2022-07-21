@@ -4,16 +4,19 @@ import java.util.*;
 
 public class LC126_单词接龙II_hard {
 
+    //李为为的题解，他是先用广度首先搜索求出最短路径的路径集合，
+    //然后用深度优先搜索，从endWord找到startWord,如果自己写确实需要熟练。
     class Solution {
 
-        public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
+        public List<List<String>> findLadders(String beginWord, String endWord,
+                                              List<String> wordList) {
             List<List<String>> res = new ArrayList<>();
             Set<String> dict = new HashSet<>(wordList);
             if (!dict.contains(endWord)) {
                 return res;
             }
             dict.remove(beginWord);
-
+            //记录有向图的步骤数或者是层数
             Map<String, Integer> steps = new HashMap<>();
             steps.put(beginWord, 0);
             Map<String, Set<String>> from = new HashMap<>();
@@ -28,7 +31,8 @@ public class LC126_单词接龙II_hard {
         }
 
 
-        private boolean bfs(String beginWord, String endWord, Set<String> dict, Map<String, Integer> steps, Map<String, Set<String>> from) {
+        private boolean bfs(String beginWord, String endWord, Set<String> dict,
+                            Map<String, Integer> steps, Map<String, Set<String>> from) {
             int wordLen = beginWord.length();
             int step = 0;
             boolean found = false;
@@ -72,7 +76,8 @@ public class LC126_单词接龙II_hard {
             return found;
         }
 
-        private void dfs(Map<String, Set<String>> from, Deque<String> path, String beginWord, String cur, List<List<String>> res) {
+        private void dfs(Map<String, Set<String>> from, Deque<String> path, String beginWord,
+                         String cur, List<List<String>> res) {
             if (cur.equals(beginWord)) {
                 res.add(new ArrayList<>(path));
                 return;

@@ -4,8 +4,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class LC130_被围绕的区域_mid {
-    int n, m;
 
+    //差点没看懂，从四个边界出发，与边界的O相连的O其实都是不能变的写成X的
+    int n, m;
     public void solve(char[][] board) {
         n = board.length;
         if (n == 0) {
@@ -43,7 +44,6 @@ public class LC130_被围绕的区域_mid {
     }
 
     //广度优先搜索实现
-
     int[] dx = {1, -1, 0, 0};
     int[] dy = {0, 0, 1, -1};
 
@@ -79,7 +79,8 @@ public class LC130_被围绕的区域_mid {
             int x = cell[0], y = cell[1];
             for (int i = 0; i < 4; i++) {
                 int mx = x + dx[i], my = y + dy[i];
-                if (mx < 0 || my < 0 || mx >= n || my >= m || board[mx][my] != 'O') {
+                if (mx < 0 || my < 0 || mx >= n || my >= m
+                        || board[mx][my] != 'O') {
                     continue;
                 }
                 queue.offer(new int[]{mx, my});
