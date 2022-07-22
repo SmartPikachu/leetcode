@@ -4,60 +4,12 @@ import java.util.*;
 
 public class LC310_最小高度树_mid {
 
-    //拓扑排序方法最优，首先找到所有度为1的节点压入队列，此时令节点剩余计数remainNodes=n；
-    //同时将当前remainNodes计数减去出度为1的节点数目，将最外层的度为1的叶子节点取出，
-    //并将与之相邻的节点的度减少，重复上述步骤将当前节点中度为1的节点压入队列中；
-    //重复上述步骤，直到剩余的节点数组remainNodes≤2 时，此时剩余的节点即为当前高度最小树的根节点。
+    /**
+     * 方法一，广度优先搜索，不过需要证明最小路径一定是最大路径一半。
+     * 首先找到距离节点0的最远节点x，然后找到距离节点x的最远节点y，
+     * 然后找到节点x与节点y的路径，然后找到根节点。
+     */
     class Solution {
-        public List<Integer> findMinHeightTrees(int n, int[][] edges) {
-            List<Integer> ans = new ArrayList<Integer>();
-            if (n == 1) {
-                ans.add(0);
-                return ans;
-            }
-            int[] degree = new int[n];
-            List<Integer>[] adj = new List[n];
-            for (int i = 0; i < n; i++) {
-                adj[i] = new ArrayList<Integer>();
-            }
-            for (int[] edge : edges) {
-                adj[edge[0]].add(edge[1]);
-                adj[edge[1]].add(edge[0]);
-                degree[edge[0]]++;
-                degree[edge[1]]++;
-            }
-            Queue<Integer> queue = new ArrayDeque<Integer>();
-            for (int i = 0; i < n; i++) {
-                if (degree[i] == 1) {
-                    queue.offer(i);
-                }
-            }
-            int remainNodes = n;
-            while (remainNodes > 2) {
-                int sz = queue.size();
-                remainNodes -= sz;
-                for (int i = 0; i < sz; i++) {
-                    int curr = queue.poll();
-                    for (int v : adj[curr]) {
-                        degree[v]--;
-                        if (degree[v] == 1) {
-                            queue.offer(v);
-                        }
-                    }
-                }
-            }
-            while (!queue.isEmpty()) {
-                ans.add(queue.poll());
-            }
-            return ans;
-        }
-    }
-
-
-    //方法一，广度优先搜索，不过需要证明最小路径一定是最大路径一半。
-    //首先找到距离节点0的最远节点x，然后找到距离节点x的最远节点y，
-    // 然后找到节点x与节点y的路径，然后找到根节点。
-    class Solution1 {
         public List<Integer> findMinHeightTrees(int n, int[][] edges) {
             List<Integer> ans = new ArrayList<Integer>();
             if (n == 1) {
@@ -118,7 +70,7 @@ public class LC310_最小高度树_mid {
     }
 
     //利用深度优先搜索
-    class Solution2 {
+    class Solution1 {
         public List<Integer> findMinHeightTrees(int n, int[][] edges) {
             List<Integer> ans = new ArrayList<Integer>();
             if (n == 1) {
@@ -182,5 +134,58 @@ public class LC310_最小高度树_mid {
             }
         }
     }
+
+    /**
+     * 拓扑排序方法最优，首先找到所有度为1的节点压入队列，此时令节点剩余计数remainNodes=n；
+     * 同时将当前remainNodes计数减去出度为1的节点数目，将最外层的度为1的叶子节点取出，
+     * 并将与之相邻的节点的度减少，重复上述步骤将当前节点中度为1的节点压入队列中；
+     * 重复上述步骤，直到剩余的节点数组remainNodes≤2 时，此时剩余的节点即为当前高度最小树的根节点。
+     */
+
+    class Solution2 {
+        public List<Integer> findMinHeightTrees(int n, int[][] edges) {
+            List<Integer> ans = new ArrayList<Integer>();
+            if (n == 1) {
+                ans.add(0);
+                return ans;
+            }
+            int[] degree = new int[n];
+            List<Integer>[] adj = new List[n];
+            for (int i = 0; i < n; i++) {
+                adj[i] = new ArrayList<Integer>();
+            }
+            for (int[] edge : edges) {
+                adj[edge[0]].add(edge[1]);
+                adj[edge[1]].add(edge[0]);
+                degree[edge[0]]++;
+                degree[edge[1]]++;
+            }
+            Queue<Integer> queue = new ArrayDeque<Integer>();
+            for (int i = 0; i < n; i++) {
+                if (degree[i] == 1) {
+                    queue.offer(i);
+                }
+            }
+            int remainNodes = n;
+            while (remainNodes > 2) {
+                int sz = queue.size();
+                remainNodes -= sz;
+                for (int i = 0; i < sz; i++) {
+                    int curr = queue.poll();
+                    for (int v : adj[curr]) {
+                        degree[v]--;
+                        if (degree[v] == 1) {
+                            queue.offer(v);
+                        }
+                    }
+                }
+            }
+            while (!queue.isEmpty()) {
+                ans.add(queue.poll());
+            }
+            return ans;
+        }
+    }
+
 
 }

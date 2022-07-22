@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Queue;
 
 public class LC286_墙与门_mid {
+
+    //广度优先搜索，这道题一定要从门开始广度优先搜素，因为门的值是0，房间的值是INF
     private static final int EMPTY = Integer.MAX_VALUE;
     private static final int GATE = 0;
     private static final List<int[]> DIRECTIONS = Arrays.asList(

@@ -3,6 +3,7 @@ package cn.jjx.coding.leetcode.classification.dfs_bfs;
 import java.util.*;
 
 public class LC365_水壶问题_mid {
+
     public boolean canMeasureWater(int x,int y,int z){
         //深度优先算法
         Deque<int[]> stack=new LinkedList<int[]>();
