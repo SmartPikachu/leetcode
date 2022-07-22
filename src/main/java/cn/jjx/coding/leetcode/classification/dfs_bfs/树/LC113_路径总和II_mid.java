@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.dfs_bfs;
+package cn.jjx.coding.leetcode.classification.dfs_bfs.树;
 
 import cn.jjx.coding.leetcode.data_structure.TreeNode;
 

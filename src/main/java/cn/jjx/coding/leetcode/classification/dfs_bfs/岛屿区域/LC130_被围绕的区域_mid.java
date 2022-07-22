@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.dfs_bfs;
+package cn.jjx.coding.leetcode.classification.dfs_bfs.岛屿区域;
 
 import java.util.LinkedList;
 import java.util.Queue;

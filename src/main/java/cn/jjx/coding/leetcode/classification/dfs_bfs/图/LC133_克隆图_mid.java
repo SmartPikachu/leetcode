@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.dfs_bfs;
+package cn.jjx.coding.leetcode.classification.dfs_bfs.图;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,7 +6,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class LC133_克隆图_mid {
-
+    
+    //数据结构
     class Node {
         public int val;
         public List<Node> neighbors;
@@ -24,6 +25,7 @@ public class LC133_克隆图_mid {
         }
     }
 
+    //深度优先搜索，官方题解一,其实这个是个有向图
     private HashMap<Node, Node> visited = new HashMap <> ();
     public Node cloneGraph(Node node) {
         if (node == null) {
@@ -36,7 +38,7 @@ public class LC133_克隆图_mid {
         }
 
         // 克隆节点，注意到为了深拷贝我们不会克隆它的邻居的列表
-        Node cloneNode = new Node(node.val, new ArrayList());
+        Node cloneNode = new Node(node.val, new ArrayList<>());
         // 哈希表存储
         visited.put(node, cloneNode);
 
@@ -53,13 +55,13 @@ public class LC133_克隆图_mid {
             return node;
         }
 
-        HashMap<Node, Node> visited = new HashMap();
+        HashMap<Node, Node> visited = new HashMap<>();
 
         // 将题目给定的节点添加到队列
-        LinkedList<Node> queue = new LinkedList<Node> ();
+        LinkedList<Node> queue = new LinkedList<> ();
         queue.add(node);
         // 克隆第一个节点并存储到哈希表中
-        visited.put(node, new Node(node.val, new ArrayList()));
+        visited.put(node, new Node(node.val, new ArrayList<>()));
 
         // 广度优先搜索
         while (!queue.isEmpty()) {
@@ -69,7 +71,7 @@ public class LC133_克隆图_mid {
             for (Node neighbor: n.neighbors) {
                 if (!visited.containsKey(neighbor)) {
                     // 如果没有被访问过，就克隆并存储在哈希表中
-                    visited.put(neighbor, new Node(neighbor.val, new ArrayList()));
+                    visited.put(neighbor, new Node(neighbor.val, new ArrayList<>()));
                     // 将邻居节点加入队列中
                     queue.add(neighbor);
                 }
