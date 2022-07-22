@@ -1,14 +1,15 @@
-package cn.jjx.coding.leetcode.classification.dfs_bfs;
+package cn.jjx.coding.leetcode.classification.dfs_bfs.记忆化搜索;
 
 import java.util.*;
 
 public class LC140_单词拆分II_hard {
 
+    //记忆化搜索
     public List<String> wordBreak(String s, List<String> wordDict) {
         Map<Integer, List<List<String>>> map =
                 new HashMap<Integer, List<List<String>>>();
         List<List<String>> wordBreaks = backtrack(s, s.length(),
-                new HashSet<String>(wordDict), 0, map);
+                new HashSet<>(wordDict), 0, map);
         List<String> breakList = new LinkedList<String>();
         for (List<String> wordBreak : wordBreaks) {
             breakList.add(String.join(" ", wordBreak));
@@ -22,7 +23,7 @@ public class LC140_单词拆分II_hard {
         if (!map.containsKey(index)) {
             List<List<String>> wordBreaks = new LinkedList<List<String>>();
             if (index == length) {
-                wordBreaks.add(new LinkedList<String>());
+                wordBreaks.add(new LinkedList<>());
             }
             for (int i = index + 1; i <= length; i++) {
                 String word = s.substring(index, i);

@@ -1,10 +1,11 @@
-package cn.jjx.coding.leetcode.classification.dfs_bfs;
+package cn.jjx.coding.leetcode.classification.dfs_bfs.岛屿区域;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class LC200_岛屿数量_mid {
 
+    //深度优先搜素，官方题解一
     void dfs(char[][] grid, int r, int c) {
         int nr = grid.length;
         int nc = grid[0].length;
@@ -40,7 +41,7 @@ public class LC200_岛屿数量_mid {
         return num_islands;
     }
 
-    //采用广度优先算法
+    //采用广度优先算法，官方题解二
     public int numIslands1(char[][] grid) {
         if (grid == null || grid.length == 0) {
             return 0;
