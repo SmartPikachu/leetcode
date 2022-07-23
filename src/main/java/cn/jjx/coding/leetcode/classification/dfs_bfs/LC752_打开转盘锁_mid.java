@@ -3,15 +3,13 @@ package cn.jjx.coding.leetcode.classification.dfs_bfs;
 import java.util.*;
 
 public class LC752_打开转盘锁_mid {
+
     public int openLock(String[] deadends, String target) {
         if ("0000".equals(target)) {
             return 0;
         }
 
-        Set<String> dead = new HashSet<String>();
-        for (String deadend : deadends) {
-            dead.add(deadend);
-        }
+        Set<String> dead = new HashSet<String>(Arrays.asList(deadends));
         if (dead.contains("0000")) {
             return -1;
         }
