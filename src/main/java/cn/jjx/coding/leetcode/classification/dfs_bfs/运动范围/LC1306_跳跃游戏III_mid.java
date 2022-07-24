@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.dfs_bfs;
+package cn.jjx.coding.leetcode.classification.dfs_bfs.运动范围;
 
 import java.util.LinkedList;
 import java.util.Queue;
