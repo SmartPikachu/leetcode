@@ -7,7 +7,7 @@ import java.util.Queue;
 
 public class LC994_腐烂的橘子_mid {
 
-    //代码逻辑很清晰
+    //代码逻辑很清晰，map的key代表烂橘子的抢位置，value代表时间。
     int[] dr = new int[]{-1, 0, 1, 0};
     int[] dc = new int[]{0, -1, 0, 1};
 
