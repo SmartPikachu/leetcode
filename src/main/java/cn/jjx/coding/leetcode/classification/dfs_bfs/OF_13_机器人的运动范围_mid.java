@@ -10,6 +10,7 @@ public class OF_13_机器人的运动范围_mid {
             return 1;
         }
         Queue<int[]> queue = new LinkedList<>();
+        //向右和向下的方向数组
         int[] dx = {1,0};
         int[] dy = {0,1};
         queue.offer(new int[]{0,0});
@@ -42,4 +43,5 @@ public class OF_13_机器人的运动范围_mid {
         }
         return res;
     }
+
 }
