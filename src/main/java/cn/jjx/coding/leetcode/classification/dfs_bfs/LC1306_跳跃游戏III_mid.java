@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class LC1306_跳跃游戏III_mid {
+
     //深度优先搜索
     public boolean canReach(int[] arr,int start){
         boolean[] visited = new boolean[arr.length];
@@ -14,7 +15,8 @@ public class LC1306_跳跃游戏III_mid {
         if(curPos<0 || curPos>=arr.length || visited[curPos]) return false;
         if(arr[curPos]==0) return true;
         visited[curPos]=true;
-        return dfs(arr,curPos-arr[curPos],visited) || dfs(arr,curPos+arr[curPos],visited);
+        return dfs(arr,curPos-arr[curPos],visited) ||
+                dfs(arr,curPos+arr[curPos],visited);
     }
 
     //广度优先搜索
