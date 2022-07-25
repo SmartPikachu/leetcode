@@ -4,9 +4,10 @@ import java.util.regex.Pattern;
 
 public class LC468_验证IP地址_mid {
 
-    //分治法
+
     class Solution {
 
+        //这个题解已经非常优雅了，但是这道题不算分治法。
         public String validateIPv4(String IP) {
             String[] nums = IP.split("\\.", -1);
             for (String x : nums) {

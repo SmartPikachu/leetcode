@@ -6,6 +6,8 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class LC23_合并k个排序链表_hard {
+
+    //采用分治合并的方法
     public ListNode mergeKLists(ListNode[] lists) {
         return merge(lists, 0, lists.length - 1);
     }
@@ -55,17 +57,14 @@ public class LC23_合并k个排序链表_hard {
     }
 
 
-    //采用优先队列的方法
+    //采用优先队列的方法，也很巧妙值得一看
     public ListNode mergeKLists1(ListNode[] lists){
         if(lists==null || lists.length==0) return null;
         PriorityQueue<ListNode> queue = new PriorityQueue<>(lists.length,
-                new Comparator<ListNode>(){
-            @Override
-            public int compare(ListNode o1,ListNode o2){
-                if(o1.val<o2.val) return -1;
-                else if(o1.val==o2.val) return 0;
-                else return 1;
-            }
+                (o1, o2) -> {
+                    if(o1.val<o2.val) return -1;
+                    else if(o1.val==o2.val) return 0;
+                    else return 1;
                 });
         ListNode dummy = new ListNode(0);
         ListNode temp = dummy;

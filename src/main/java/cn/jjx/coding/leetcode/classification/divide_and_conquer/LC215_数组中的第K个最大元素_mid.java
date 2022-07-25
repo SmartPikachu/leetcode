@@ -5,6 +5,8 @@ import java.util.PriorityQueue;
 import java.util.Random;
 
 public class LC215_数组中的第K个最大元素_mid {
+
+    //基于快速排序的方法
     Random random = new Random();
 
     public int findKthLargest(int[] nums, int k) {
@@ -17,7 +19,8 @@ public class LC215_数组中的第K个最大元素_mid {
         if (q == index) {
             return a[q];
         } else {
-            return q < index ? quickSelect(a, q + 1, r, index) : quickSelect(a, l, q - 1, index);
+            return q < index ? quickSelect(a, q + 1, r, index) :
+                    quickSelect(a, l, q - 1, index);
         }
     }
 
@@ -28,14 +31,14 @@ public class LC215_数组中的第K个最大元素_mid {
     }
 
     public int partition(int[] a, int l, int r) {
-        int x = a[r], i = l - 1;
+        int x = a[r], i = l;
         for (int j = l; j < r; ++j) {
             if (a[j] <= x) {
-                swap(a, ++i, j);
+                swap(a, i++, j);
             }
         }
-        swap(a, i + 1, r);
-        return i + 1;
+        swap(a, i, r);
+        return i;
     }
 
     public void swap(int[] a, int i, int j) {
@@ -45,7 +48,7 @@ public class LC215_数组中的第K个最大元素_mid {
     }
 
 
-    //下面的方法是基于堆排序
+    //下面的方法是基于堆排序的方法
     public int findKthLargest1(int[] nums, int k) {
         int heapSize = nums.length;
         buildMaxHeap(nums, heapSize);
