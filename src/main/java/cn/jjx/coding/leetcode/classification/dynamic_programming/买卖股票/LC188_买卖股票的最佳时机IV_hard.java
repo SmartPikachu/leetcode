@@ -1,8 +1,13 @@
-package cn.jjx.coding.leetcode.classification.dynamic_programming;
+package cn.jjx.coding.leetcode.classification.dynamic_programming.买卖股票;
 
 import java.util.Arrays;
 
 public class LC188_买卖股票的最佳时机IV_hard {
+
+    /**
+     *这里的buy[i][j]表示对于prices[0...i]中的价格而言，进行恰好j比交易
+     * sell[i][j]表示在prices[0...i]价格而言，进行了j比交易，最大利润。
+     */
     public int maxProfit(int k, int[] prices) {
         if (prices.length == 0) {
             return 0;

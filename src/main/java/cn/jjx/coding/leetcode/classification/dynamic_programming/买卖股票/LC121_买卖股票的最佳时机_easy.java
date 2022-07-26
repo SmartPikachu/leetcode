@@ -1,6 +1,8 @@
-package cn.jjx.coding.leetcode.classification.dynamic_programming;
+package cn.jjx.coding.leetcode.classification.dynamic_programming.买卖股票;
 
 public class LC121_买卖股票的最佳时机_easy {
+
+    //一次遍历，寻找最大利润。
     public int maxProfit(int prices[]) {
         int minprice = Integer.MAX_VALUE;
         int maxprofit = 0;
@@ -13,4 +15,5 @@ public class LC121_买卖股票的最佳时机_easy {
         }
         return maxprofit;
     }
+
 }

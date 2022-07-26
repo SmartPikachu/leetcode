@@ -1,6 +1,8 @@
-package cn.jjx.coding.leetcode.classification.dynamic_programming;
+package cn.jjx.coding.leetcode.classification.dynamic_programming.买卖股票;
 
 public class LC123_买卖股票的最佳时机III_hard {
+
+    //这种多状态的动态规划问题
     public int maxProfit(int[] prices) {
         int n = prices.length;
         int buy1 = -prices[0], sell1 = 0;

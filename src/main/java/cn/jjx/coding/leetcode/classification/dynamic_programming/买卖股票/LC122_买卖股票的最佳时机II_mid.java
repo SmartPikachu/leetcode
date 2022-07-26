@@ -1,7 +1,8 @@
-package cn.jjx.coding.leetcode.classification.dynamic_programming;
+package cn.jjx.coding.leetcode.classification.dynamic_programming.买卖股票;
 
 public class LC122_买卖股票的最佳时机II_mid {
 
+    //方法一，分为买入和卖出状态，列出状态表达式。0表示卖出，1表示买入。
     public int maxProfit(int[] prices) {
         int n = prices.length;
         int[][] dp = new int[n][2];

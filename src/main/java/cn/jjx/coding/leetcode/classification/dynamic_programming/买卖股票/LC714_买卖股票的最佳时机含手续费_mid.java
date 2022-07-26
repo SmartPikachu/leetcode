@@ -1,7 +1,8 @@
-package cn.jjx.coding.leetcode.classification.dynamic_programming;
+package cn.jjx.coding.leetcode.classification.dynamic_programming.买卖股票;
 
 public class LC714_买卖股票的最佳时机含手续费_mid {
 
+    //动态规划
     public int maxProfit(int[] prices, int fee) {
         int n = prices.length;
         int[][] dp = new int[n][2];

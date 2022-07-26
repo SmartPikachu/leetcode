@@ -1,6 +1,7 @@
-package cn.jjx.coding.leetcode.classification.dynamic_programming;
+package cn.jjx.coding.leetcode.classification.dynamic_programming.买卖股票;
 
 public class LC309_买卖股票的最佳时机含冷冻期_mid {
+
     public int maxProfit(int[] prices) {
         if (prices.length == 0) {
             return 0;
