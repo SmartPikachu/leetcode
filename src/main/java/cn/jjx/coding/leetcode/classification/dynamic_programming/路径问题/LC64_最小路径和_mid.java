@@ -1,4 +1,4 @@
-package cn.jjx.coding.leetcode.classification.dynamic_programming;
+package cn.jjx.coding.leetcode.classification.dynamic_programming.路径问题;
 
 public class LC64_最小路径和_mid {
 
