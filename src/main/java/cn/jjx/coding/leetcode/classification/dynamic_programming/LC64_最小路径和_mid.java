@@ -1,6 +1,7 @@
 package cn.jjx.coding.leetcode.classification.dynamic_programming;
 
 public class LC64_最小路径和_mid {
+
     public int minPathSum(int[][] grid) {
         if(grid==null || grid.length==0 || grid[0].length==0){
             return 0;
@@ -16,7 +17,8 @@ public class LC64_最小路径和_mid {
         }
         for(int i=1;i<n;i++){
             for(int j=1;j<m;j++){
-                dp[i][j]=Math.min(dp[i-1][j]+grid[i][j],dp[i][j-1]+grid[i][j]);
+                dp[i][j]=Math.min(dp[i-1][j]+grid[i][j],
+                        dp[i][j-1]+grid[i][j]);
             }
         }
         return dp[n-1][m-1];
