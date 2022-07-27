@@ -1,6 +1,7 @@
 package cn.jjx.coding.leetcode.classification.dynamic_programming;
 
 public class LC62_不同路径_mid {
+
     public int uniquePaths(int m, int n) {
         int[][] f = new int[m][n];
         for (int i = 0; i < m; ++i) {
